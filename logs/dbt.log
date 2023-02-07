@@ -10176,3 +10176,2367 @@ having count(*) > 1
 [0m08:35:39.810568 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
 [0m08:35:39.810788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94800e0fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9490df3ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9490df3130>]}
 [0m08:35:39.810956 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-07 08:54:08.922127 | b5bf990f-ab3e-47f1-a6b2-7ea42df6d9a1 ==============================
+[0m08:54:08.922147 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:54:08.922948 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'indirect_selection': 'eager', 'select': ['dim_listings_cleansed'], 'which': 'test', 'rpc_method': 'test'}
+[0m08:54:08.923138 [debug] [MainThread]: Tracking: tracking
+[0m08:54:08.923500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fca50051fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fca50067040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fca500670a0>]}
+[0m08:54:08.978232 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m08:54:08.978628 [debug] [MainThread]: Partial parsing: added file: dbtlearn2://macros/no_nulls_in_columns.sql
+[0m08:54:08.978785 [debug] [MainThread]: Partial parsing: added file: dbtlearn2://tests/no_nulls_in_dim_listings.sql
+[0m08:54:08.978920 [debug] [MainThread]: Parsing macros/no_nulls_in_columns.sql
+[0m08:54:09.015720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b5bf990f-ab3e-47f1-a6b2-7ea42df6d9a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcaa33fe040>]}
+[0m08:54:09.022649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b5bf990f-ab3e-47f1-a6b2-7ea42df6d9a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcaa33e2e50>]}
+[0m08:54:09.022943 [info ] [MainThread]: Found 8 models, 8 tests, 2 snapshots, 0 analyses, 304 macros, 0 operations, 1 seed file, 3 sources, 0 exposures, 0 metrics
+[0m08:54:09.023142 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5bf990f-ab3e-47f1-a6b2-7ea42df6d9a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fca7022f7c0>]}
+[0m08:54:09.024442 [info ] [MainThread]: 
+[0m08:54:09.024912 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m08:54:09.026047 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb_dev"
+[0m08:54:09.036438 [debug] [ThreadPool]: Using snowflake connection "list_airbnb_dev"
+[0m08:54:09.036676 [debug] [ThreadPool]: On list_airbnb_dev: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb_dev"} */
+show terse objects in airbnb.dev
+[0m08:54:09.036777 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:54:10.587995 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.55 seconds
+[0m08:54:10.590640 [debug] [ThreadPool]: On list_airbnb_dev: Close
+[0m08:54:10.990515 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5bf990f-ab3e-47f1-a6b2-7ea42df6d9a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fca50073880>]}
+[0m08:54:10.991379 [info ] [MainThread]: Concurrency: 6 threads (target='dev')
+[0m08:54:10.991616 [info ] [MainThread]: 
+[0m08:54:10.996513 [debug] [Thread-1  ]: Began running node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m08:54:10.996633 [debug] [Thread-2  ]: Began running node test.dbtlearn2.consistent_created_at
+[0m08:54:10.997254 [debug] [Thread-3  ]: Began running node test.dbtlearn2.dim_listings_minimum_nights
+[0m08:54:10.997395 [debug] [Thread-4  ]: Began running node test.dbtlearn2.no_nulls_in_dim_listings
+[0m08:54:10.997496 [debug] [Thread-5  ]: Began running node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m08:54:10.997587 [info ] [Thread-1  ]: 1 of 8 START test accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room  [RUN]
+[0m08:54:10.997681 [debug] [Thread-6  ]: Began running node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m08:54:10.997800 [info ] [Thread-2  ]: 2 of 8 START test consistent_created_at ........................................ [RUN]
+[0m08:54:10.997930 [info ] [Thread-3  ]: 3 of 8 START test dim_listings_minimum_nights .................................. [RUN]
+[0m08:54:10.998058 [info ] [Thread-4  ]: 4 of 8 START test no_nulls_in_dim_listings ..................................... [RUN]
+[0m08:54:10.998170 [info ] [Thread-5  ]: 5 of 8 START test not_null_dim_listings_cleansed_host_id ....................... [RUN]
+[0m08:54:10.998594 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m08:54:10.998700 [info ] [Thread-6  ]: 6 of 8 START test not_null_dim_listings_cleansed_listing_id .................... [RUN]
+[0m08:54:10.999088 [debug] [Thread-2  ]: Acquiring new snowflake connection "test.dbtlearn2.consistent_created_at"
+[0m08:54:10.999493 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbtlearn2.dim_listings_minimum_nights"
+[0m08:54:10.999941 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m08:54:11.000337 [debug] [Thread-5  ]: Acquiring new snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m08:54:11.000454 [debug] [Thread-1  ]: Began compiling node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m08:54:11.000844 [debug] [Thread-6  ]: Acquiring new snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m08:54:11.000968 [debug] [Thread-2  ]: Began compiling node test.dbtlearn2.consistent_created_at
+[0m08:54:11.001100 [debug] [Thread-3  ]: Began compiling node test.dbtlearn2.dim_listings_minimum_nights
+[0m08:54:11.001215 [debug] [Thread-4  ]: Began compiling node test.dbtlearn2.no_nulls_in_dim_listings
+[0m08:54:11.001327 [debug] [Thread-5  ]: Began compiling node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m08:54:11.001453 [debug] [Thread-1  ]: Compiling test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m08:54:11.001573 [debug] [Thread-6  ]: Began compiling node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m08:54:11.001701 [debug] [Thread-2  ]: Compiling test.dbtlearn2.consistent_created_at
+[0m08:54:11.001805 [debug] [Thread-3  ]: Compiling test.dbtlearn2.dim_listings_minimum_nights
+[0m08:54:11.001932 [debug] [Thread-4  ]: Compiling test.dbtlearn2.no_nulls_in_dim_listings
+[0m08:54:11.002026 [debug] [Thread-5  ]: Compiling test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m08:54:11.012642 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m08:54:11.012889 [debug] [Thread-6  ]: Compiling test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m08:54:11.015082 [debug] [Thread-2  ]: Writing injected SQL for node "test.dbtlearn2.consistent_created_at"
+[0m08:54:11.016676 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbtlearn2.dim_listings_minimum_nights"
+[0m08:54:11.024630 [debug] [Thread-4  ]: Using snowflake connection "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m08:54:11.031001 [debug] [Thread-5  ]: Writing injected SQL for node "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m08:54:11.033958 [debug] [Thread-6  ]: Writing injected SQL for node "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m08:54:11.034266 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:54:11.034521 [debug] [Thread-2  ]: finished collecting timing info
+[0m08:54:11.034627 [debug] [Thread-4  ]: On test.dbtlearn2.no_nulls_in_dim_listings: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.no_nulls_in_dim_listings"} */
+describe table airbnb.dev.dim_listings_cleansed
+[0m08:54:11.035105 [debug] [Thread-1  ]: Began executing node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m08:54:11.035335 [debug] [Thread-3  ]: finished collecting timing info
+[0m08:54:11.035482 [debug] [Thread-2  ]: Began executing node test.dbtlearn2.consistent_created_at
+[0m08:54:11.035618 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m08:54:11.041013 [debug] [Thread-5  ]: finished collecting timing info
+[0m08:54:11.041120 [debug] [Thread-6  ]: finished collecting timing info
+[0m08:54:11.051687 [debug] [Thread-1  ]: Writing runtime sql for node "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m08:54:11.051992 [debug] [Thread-3  ]: Began executing node test.dbtlearn2.dim_listings_minimum_nights
+[0m08:54:11.053659 [debug] [Thread-2  ]: Writing runtime sql for node "test.dbtlearn2.consistent_created_at"
+[0m08:54:11.054774 [debug] [Thread-5  ]: Began executing node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m08:54:11.054937 [debug] [Thread-6  ]: Began executing node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m08:54:11.056711 [debug] [Thread-3  ]: Writing runtime sql for node "test.dbtlearn2.dim_listings_minimum_nights"
+[0m08:54:11.058770 [debug] [Thread-5  ]: Writing runtime sql for node "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m08:54:11.059404 [debug] [Thread-1  ]: Using snowflake connection "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m08:54:11.061583 [debug] [Thread-6  ]: Writing runtime sql for node "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m08:54:11.062076 [debug] [Thread-2  ]: Using snowflake connection "test.dbtlearn2.consistent_created_at"
+[0m08:54:11.062429 [debug] [Thread-1  ]: On test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        room_type as value_field,
+        count(*) as n_records
+
+    from airbnb.dev.dim_listings_cleansed
+    group by room_type
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Entire home/apt','Private room','Shared room','Hotel room'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m08:54:11.062998 [debug] [Thread-3  ]: Using snowflake connection "test.dbtlearn2.dim_listings_minimum_nights"
+[0m08:54:11.063424 [debug] [Thread-5  ]: Using snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m08:54:11.063585 [debug] [Thread-2  ]: On test.dbtlearn2.consistent_created_at: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.consistent_created_at"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      select 
+r.* 
+from airbnb.dev.fct_reviews r
+left join
+airbnb.dev.dim_listings_cleansed l
+on r.listing_id=l.listing_id
+where r.review_date<l.created_at
+
+limit 10
+      
+    ) dbt_internal_test
+[0m08:54:11.063959 [debug] [Thread-6  ]: Using snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m08:54:11.064078 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m08:54:11.064191 [debug] [Thread-3  ]: On test.dbtlearn2.dim_listings_minimum_nights: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.dim_listings_minimum_nights"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      select 
+*
+from airbnb.dev.dim_listings_cleansed
+where minimum_nights < 1
+limit 10
+      
+    ) dbt_internal_test
+[0m08:54:11.064291 [debug] [Thread-5  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select host_id
+from airbnb.dev.dim_listings_cleansed
+where host_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m08:54:11.064380 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m08:54:11.064476 [debug] [Thread-6  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select listing_id
+from airbnb.dev.dim_listings_cleansed
+where listing_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m08:54:11.065107 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m08:54:11.065593 [debug] [Thread-5  ]: Opening a new connection, currently in state init
+[0m08:54:11.066532 [debug] [Thread-6  ]: Opening a new connection, currently in state init
+[0m08:54:12.505388 [debug] [Thread-4  ]: SQL status: SUCCESS 8 in 1.47 seconds
+[0m08:54:12.508718 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m08:54:12.509178 [debug] [Thread-4  ]: finished collecting timing info
+[0m08:54:12.509317 [debug] [Thread-4  ]: Began executing node test.dbtlearn2.no_nulls_in_dim_listings
+[0m08:54:12.511310 [debug] [Thread-4  ]: Writing runtime sql for node "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m08:54:12.512142 [debug] [Thread-4  ]: Using snowflake connection "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m08:54:12.512286 [debug] [Thread-4  ]: On test.dbtlearn2.no_nulls_in_dim_listings: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.no_nulls_in_dim_listings"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    SELECT * FROM airbnb.dev.dim_listings_cleansed WHERE
+    LISTING_ID IS NULL OR
+    LISTING_NAME IS NULL OR
+    ROOM_TYPE IS NULL OR
+    MINIMUM_NIGHTS IS NULL OR
+    HOST_ID IS NULL OR
+    PRICE IS NULL OR
+    CREATED_AT IS NULL OR
+    UPDATED_AT IS NULL OR
+    
+    FALSE
+
+      
+    ) dbt_internal_test
+[0m08:54:12.598315 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 1.53 seconds
+[0m08:54:12.612714 [debug] [Thread-2  ]: finished collecting timing info
+[0m08:54:12.612971 [debug] [Thread-2  ]: On test.dbtlearn2.consistent_created_at: Close
+[0m08:54:12.646605 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.58 seconds
+[0m08:54:12.648214 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:54:12.648395 [debug] [Thread-1  ]: On test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af: Close
+[0m08:54:12.650530 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 1.59 seconds
+[0m08:54:12.651963 [debug] [Thread-3  ]: finished collecting timing info
+[0m08:54:12.652156 [debug] [Thread-3  ]: On test.dbtlearn2.dim_listings_minimum_nights: Close
+[0m08:54:12.674241 [debug] [Thread-5  ]: SQL status: SUCCESS 1 in 1.61 seconds
+[0m08:54:12.674835 [debug] [Thread-6  ]: SQL status: SUCCESS 1 in 1.61 seconds
+[0m08:54:12.676275 [debug] [Thread-5  ]: finished collecting timing info
+[0m08:54:12.677322 [debug] [Thread-6  ]: finished collecting timing info
+[0m08:54:12.677473 [debug] [Thread-5  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be: Close
+[0m08:54:12.677581 [debug] [Thread-6  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9: Close
+[0m08:54:13.011285 [info ] [Thread-2  ]: 2 of 8 PASS consistent_created_at .............................................. [[32mPASS[0m in 2.01s]
+[0m08:54:13.012482 [debug] [Thread-2  ]: Finished running node test.dbtlearn2.consistent_created_at
+[0m08:54:13.012676 [debug] [Thread-2  ]: Began running node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m08:54:13.013006 [info ] [Thread-2  ]: 7 of 8 START test relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_  [RUN]
+[0m08:54:13.013545 [debug] [Thread-2  ]: Acquiring new snowflake connection "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m08:54:13.013671 [debug] [Thread-2  ]: Began compiling node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m08:54:13.013775 [debug] [Thread-2  ]: Compiling test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m08:54:13.020525 [debug] [Thread-2  ]: Writing injected SQL for node "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m08:54:13.022778 [debug] [Thread-2  ]: finished collecting timing info
+[0m08:54:13.022909 [debug] [Thread-2  ]: Began executing node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m08:54:13.024512 [debug] [Thread-2  ]: Writing runtime sql for node "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m08:54:13.025712 [debug] [Thread-2  ]: Using snowflake connection "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m08:54:13.025820 [debug] [Thread-2  ]: On test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select host_id as from_field
+    from airbnb.dev.dim_listings_cleansed
+    where host_id is not null
+),
+
+parent as (
+    select host_id as to_field
+    from airbnb.dev.dim_hosts_cleansed
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m08:54:13.025919 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m08:54:13.039492 [info ] [Thread-1  ]: 1 of 8 PASS accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room  [[32mPASS[0m in 2.04s]
+[0m08:54:13.039874 [debug] [Thread-1  ]: Finished running node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m08:54:13.040009 [debug] [Thread-1  ]: Began running node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m08:54:13.040153 [info ] [Thread-1  ]: 8 of 8 START test unique_dim_listings_cleansed_listing_id ...................... [RUN]
+[0m08:54:13.040564 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m08:54:13.040961 [debug] [Thread-1  ]: Began compiling node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m08:54:13.041079 [debug] [Thread-1  ]: Compiling test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m08:54:13.046043 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m08:54:13.046604 [info ] [Thread-3  ]: 3 of 8 PASS dim_listings_minimum_nights ........................................ [[32mPASS[0m in 2.05s]
+[0m08:54:13.047096 [debug] [Thread-3  ]: Finished running node test.dbtlearn2.dim_listings_minimum_nights
+[0m08:54:13.048031 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:54:13.048173 [debug] [Thread-1  ]: Began executing node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m08:54:13.049991 [debug] [Thread-1  ]: Writing runtime sql for node "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m08:54:13.051021 [debug] [Thread-1  ]: Using snowflake connection "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m08:54:13.051147 [debug] [Thread-1  ]: On test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    listing_id as unique_field,
+    count(*) as n_records
+
+from airbnb.dev.dim_listings_cleansed
+where listing_id is not null
+group by listing_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m08:54:13.051244 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m08:54:13.070679 [info ] [Thread-5  ]: 5 of 8 PASS not_null_dim_listings_cleansed_host_id ............................. [[32mPASS[0m in 2.07s]
+[0m08:54:13.071130 [info ] [Thread-6  ]: 6 of 8 PASS not_null_dim_listings_cleansed_listing_id .......................... [[32mPASS[0m in 2.07s]
+[0m08:54:13.071473 [debug] [Thread-5  ]: Finished running node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m08:54:13.071698 [debug] [Thread-6  ]: Finished running node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m08:54:13.587091 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 1.07 seconds
+[0m08:54:13.593911 [debug] [Thread-4  ]: finished collecting timing info
+[0m08:54:13.600460 [debug] [Thread-4  ]: On test.dbtlearn2.no_nulls_in_dim_listings: Close
+[0m08:54:14.079942 [info ] [Thread-4  ]: 4 of 8 PASS no_nulls_in_dim_listings ........................................... [[32mPASS[0m in 3.08s]
+[0m08:54:14.080825 [debug] [Thread-4  ]: Finished running node test.dbtlearn2.no_nulls_in_dim_listings
+[0m08:54:14.184925 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 1.16 seconds
+[0m08:54:14.187501 [debug] [Thread-2  ]: finished collecting timing info
+[0m08:54:14.187692 [debug] [Thread-2  ]: On test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad: Close
+[0m08:54:14.247457 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.2 seconds
+[0m08:54:14.250499 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:54:14.250782 [debug] [Thread-1  ]: On test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e: Close
+[0m08:54:14.579740 [info ] [Thread-2  ]: 7 of 8 PASS relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_  [[32mPASS[0m in 1.57s]
+[0m08:54:14.580277 [debug] [Thread-2  ]: Finished running node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m08:54:14.639360 [info ] [Thread-1  ]: 8 of 8 PASS unique_dim_listings_cleansed_listing_id ............................ [[32mPASS[0m in 1.60s]
+[0m08:54:14.639927 [debug] [Thread-1  ]: Finished running node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m08:54:14.641199 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m08:54:14.641605 [info ] [MainThread]: 
+[0m08:54:14.641797 [info ] [MainThread]: Finished running 8 tests in 0 hours 0 minutes and 5.62 seconds (5.62s).
+[0m08:54:14.641966 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:54:14.642059 [debug] [MainThread]: Connection 'test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e' was properly closed.
+[0m08:54:14.642143 [debug] [MainThread]: Connection 'test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad' was properly closed.
+[0m08:54:14.642221 [debug] [MainThread]: Connection 'test.dbtlearn2.dim_listings_minimum_nights' was properly closed.
+[0m08:54:14.642320 [debug] [MainThread]: Connection 'test.dbtlearn2.no_nulls_in_dim_listings' was properly closed.
+[0m08:54:14.642476 [debug] [MainThread]: Connection 'test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be' was properly closed.
+[0m08:54:14.642579 [debug] [MainThread]: Connection 'test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9' was properly closed.
+[0m08:54:14.648485 [info ] [MainThread]: 
+[0m08:54:14.648696 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:54:14.648891 [info ] [MainThread]: 
+[0m08:54:14.649049 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m08:54:14.649262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcaa224b100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcaa2d6b0a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcaa3384790>]}
+[0m08:54:14.649441 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-07 09:00:35.931167 | 108b17b2-d9a2-4c06-89fb-b8a888f83b3c ==============================
+[0m09:00:35.931186 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:00:35.931903 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'indirect_selection': 'eager', 'select': ['dim_listings_cleansed'], 'which': 'test', 'rpc_method': 'test'}
+[0m09:00:35.932043 [debug] [MainThread]: Tracking: tracking
+[0m09:00:35.932339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd03bd2160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd03bd21c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd03bd2220>]}
+[0m09:00:35.965031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd03bbc730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fccf0689310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fccf06892b0>]}
+[0m09:00:35.965276 [debug] [MainThread]: Flushing usage events
+[0m09:00:36.679823 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading dbtlearn2: schema.yml - Runtime Error
+    Syntax error near line 27
+    ------------------------------
+    24 |               'Shared room',
+    25 |               'Hotel room']
+    26 | 
+    27 |       -name: minimum_nights
+    28 |         tests:
+    29 |           - positive_value
+    
+    Raw Error:
+    ------------------------------
+    while parsing a block collection
+      in "<unicode string>", line 7, column 7
+    did not find expected '-' indicator
+      in "<unicode string>", line 27, column 7
+
+
+============================== 2023-02-07 09:00:54.686273 | 18f7bd82-e35f-46ac-9225-7022bb28bcf8 ==============================
+[0m09:00:54.686311 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:00:54.686929 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'indirect_selection': 'eager', 'select': ['dim_listings_cleansed'], 'which': 'test', 'rpc_method': 'test'}
+[0m09:00:54.687076 [debug] [MainThread]: Tracking: tracking
+[0m09:00:54.687382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fef790e00a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fef790e0100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fef790e0160>]}
+[0m09:00:54.739045 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 2 files added, 0 files changed.
+[0m09:00:54.739446 [debug] [MainThread]: Partial parsing: added file: dbtlearn2://models/schema.yml
+[0m09:00:54.739599 [debug] [MainThread]: Partial parsing: added file: dbtlearn2://macros/positive_value.sql
+[0m09:00:54.739816 [debug] [MainThread]: Parsing macros/positive_value.sql
+[0m09:00:54.753313 [debug] [MainThread]: 1699: static parser successfully parsed dim/dim_listings_cleansed.sql
+[0m09:00:54.812654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '18f7bd82-e35f-46ac-9225-7022bb28bcf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fef9abaf0d0>]}
+[0m09:00:54.819377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '18f7bd82-e35f-46ac-9225-7022bb28bcf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fef7911ff70>]}
+[0m09:00:54.819616 [info ] [MainThread]: Found 8 models, 9 tests, 2 snapshots, 0 analyses, 305 macros, 0 operations, 1 seed file, 3 sources, 0 exposures, 0 metrics
+[0m09:00:54.819807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '18f7bd82-e35f-46ac-9225-7022bb28bcf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fef80113b20>]}
+[0m09:00:54.821163 [info ] [MainThread]: 
+[0m09:00:54.821604 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:00:54.822639 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb_dev"
+[0m09:00:54.832742 [debug] [ThreadPool]: Using snowflake connection "list_airbnb_dev"
+[0m09:00:54.832988 [debug] [ThreadPool]: On list_airbnb_dev: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb_dev"} */
+show terse objects in airbnb.dev
+[0m09:00:54.833095 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:00:56.355321 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.52 seconds
+[0m09:00:56.357881 [debug] [ThreadPool]: On list_airbnb_dev: Close
+[0m09:00:56.740741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '18f7bd82-e35f-46ac-9225-7022bb28bcf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fef7911f1c0>]}
+[0m09:00:56.741551 [info ] [MainThread]: Concurrency: 6 threads (target='dev')
+[0m09:00:56.741766 [info ] [MainThread]: 
+[0m09:00:56.747183 [debug] [Thread-1  ]: Began running node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:00:56.747343 [info ] [Thread-1  ]: 1 of 9 START test accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room  [RUN]
+[0m09:00:56.747515 [debug] [Thread-2  ]: Began running node test.dbtlearn2.consistent_created_at
+[0m09:00:56.747777 [debug] [Thread-3  ]: Began running node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:00:56.747866 [debug] [Thread-4  ]: Began running node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:00:56.748280 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m09:00:56.748374 [debug] [Thread-5  ]: Began running node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:00:56.748452 [debug] [Thread-6  ]: Began running node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:00:56.748561 [info ] [Thread-2  ]: 2 of 9 START test consistent_created_at ........................................ [RUN]
+[0m09:00:56.748681 [info ] [Thread-3  ]: 3 of 9 START test dim_listings_minimum_nights .................................. [RUN]
+[0m09:00:56.748791 [info ] [Thread-4  ]: 4 of 9 START test no_nulls_in_dim_listings ..................................... [RUN]
+[0m09:00:56.748900 [debug] [Thread-1  ]: Began compiling node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:00:56.748995 [info ] [Thread-5  ]: 5 of 9 START test not_null_dim_listings_cleansed_host_id ....................... [RUN]
+[0m09:00:56.749092 [info ] [Thread-6  ]: 6 of 9 START test not_null_dim_listings_cleansed_listing_id .................... [RUN]
+[0m09:00:56.749489 [debug] [Thread-2  ]: Acquiring new snowflake connection "test.dbtlearn2.consistent_created_at"
+[0m09:00:56.749888 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbtlearn2.dim_listings_minimum_nights"
+[0m09:00:56.750293 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:00:56.750419 [debug] [Thread-1  ]: Compiling test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:00:56.750796 [debug] [Thread-5  ]: Acquiring new snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m09:00:56.751169 [debug] [Thread-6  ]: Acquiring new snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m09:00:56.751274 [debug] [Thread-2  ]: Began compiling node test.dbtlearn2.consistent_created_at
+[0m09:00:56.751377 [debug] [Thread-3  ]: Began compiling node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:00:56.751468 [debug] [Thread-4  ]: Began compiling node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:00:56.755902 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m09:00:56.756054 [debug] [Thread-5  ]: Began compiling node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:00:56.756155 [debug] [Thread-6  ]: Began compiling node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:00:56.756246 [debug] [Thread-2  ]: Compiling test.dbtlearn2.consistent_created_at
+[0m09:00:56.756335 [debug] [Thread-3  ]: Compiling test.dbtlearn2.dim_listings_minimum_nights
+[0m09:00:56.756421 [debug] [Thread-4  ]: Compiling test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:00:56.756588 [debug] [Thread-5  ]: Compiling test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:00:56.756685 [debug] [Thread-6  ]: Compiling test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:00:56.758477 [debug] [Thread-2  ]: Writing injected SQL for node "test.dbtlearn2.consistent_created_at"
+[0m09:00:56.760763 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbtlearn2.dim_listings_minimum_nights"
+[0m09:00:56.761002 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:00:56.769757 [debug] [Thread-4  ]: Using snowflake connection "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:00:56.776010 [debug] [Thread-5  ]: Writing injected SQL for node "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m09:00:56.778719 [debug] [Thread-6  ]: Writing injected SQL for node "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m09:00:56.779072 [debug] [Thread-1  ]: Began executing node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:00:56.779246 [debug] [Thread-4  ]: On test.dbtlearn2.no_nulls_in_dim_listings: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.no_nulls_in_dim_listings"} */
+describe table airbnb.dev.dim_listings_cleansed
+[0m09:00:56.779639 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:00:56.779765 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:00:56.779831 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:00:56.792386 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:00:56.794402 [debug] [Thread-1  ]: Writing runtime sql for node "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m09:00:56.794563 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m09:00:56.794731 [debug] [Thread-3  ]: Began executing node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:00:56.794846 [debug] [Thread-2  ]: Began executing node test.dbtlearn2.consistent_created_at
+[0m09:00:56.794963 [debug] [Thread-5  ]: Began executing node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:00:56.795071 [debug] [Thread-6  ]: Began executing node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:00:56.797465 [debug] [Thread-3  ]: Writing runtime sql for node "test.dbtlearn2.dim_listings_minimum_nights"
+[0m09:00:56.799379 [debug] [Thread-2  ]: Writing runtime sql for node "test.dbtlearn2.consistent_created_at"
+[0m09:00:56.799916 [debug] [Thread-1  ]: Using snowflake connection "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m09:00:56.802267 [debug] [Thread-5  ]: Writing runtime sql for node "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m09:00:56.804250 [debug] [Thread-6  ]: Writing runtime sql for node "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m09:00:56.804532 [debug] [Thread-1  ]: On test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        room_type as value_field,
+        count(*) as n_records
+
+    from airbnb.dev.dim_listings_cleansed
+    group by room_type
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Entire home/apt','Private room','Shared room','Hotel room'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m09:00:56.804816 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m09:00:56.805259 [debug] [Thread-6  ]: Using snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m09:00:56.805638 [debug] [Thread-5  ]: Using snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m09:00:56.806170 [debug] [Thread-3  ]: Using snowflake connection "test.dbtlearn2.dim_listings_minimum_nights"
+[0m09:00:56.806568 [debug] [Thread-6  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select listing_id
+from airbnb.dev.dim_listings_cleansed
+where listing_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m09:00:56.807350 [debug] [Thread-2  ]: Using snowflake connection "test.dbtlearn2.consistent_created_at"
+[0m09:00:56.807444 [debug] [Thread-5  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select host_id
+from airbnb.dev.dim_listings_cleansed
+where host_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m09:00:56.807650 [debug] [Thread-3  ]: On test.dbtlearn2.dim_listings_minimum_nights: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.dim_listings_minimum_nights"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      select 
+*
+from airbnb.dev.dim_listings_cleansed
+where minimum_nights < 1
+limit 10
+      
+    ) dbt_internal_test
+[0m09:00:56.807964 [debug] [Thread-6  ]: Opening a new connection, currently in state init
+[0m09:00:56.808263 [debug] [Thread-2  ]: On test.dbtlearn2.consistent_created_at: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.consistent_created_at"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      select 
+r.* 
+from airbnb.dev.fct_reviews r
+left join
+airbnb.dev.dim_listings_cleansed l
+on r.listing_id=l.listing_id
+where r.review_date<l.created_at
+
+limit 10
+      
+    ) dbt_internal_test
+[0m09:00:56.808459 [debug] [Thread-5  ]: Opening a new connection, currently in state init
+[0m09:00:56.808564 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m09:00:56.809364 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m09:00:58.036106 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 1.23 seconds
+[0m09:00:58.049129 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:00:58.049311 [debug] [Thread-2  ]: On test.dbtlearn2.consistent_created_at: Close
+[0m09:00:58.126239 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 1.32 seconds
+[0m09:00:58.127892 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:00:58.128035 [debug] [Thread-3  ]: On test.dbtlearn2.dim_listings_minimum_nights: Close
+[0m09:00:58.284742 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.48 seconds
+[0m09:00:58.288130 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:00:58.288341 [debug] [Thread-1  ]: On test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af: Close
+[0m09:00:58.359591 [debug] [Thread-4  ]: SQL status: SUCCESS 8 in 1.56 seconds
+[0m09:00:58.363337 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:00:58.363985 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:00:58.364124 [debug] [Thread-4  ]: Began executing node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:00:58.368083 [debug] [Thread-4  ]: Writing runtime sql for node "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:00:58.369357 [debug] [Thread-4  ]: Using snowflake connection "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:00:58.369466 [debug] [Thread-4  ]: On test.dbtlearn2.no_nulls_in_dim_listings: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.no_nulls_in_dim_listings"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    SELECT * FROM airbnb.dev.dim_listings_cleansed WHERE
+    LISTING_ID IS NULL OR
+    LISTING_NAME IS NULL OR
+    ROOM_TYPE IS NULL OR
+    MINIMUM_NIGHTS IS NULL OR
+    HOST_ID IS NULL OR
+    PRICE IS NULL OR
+    CREATED_AT IS NULL OR
+    UPDATED_AT IS NULL OR
+    
+    FALSE
+
+      
+    ) dbt_internal_test
+[0m09:00:58.451485 [info ] [Thread-2  ]: 2 of 9 PASS consistent_created_at .............................................. [[32mPASS[0m in 1.70s]
+[0m09:00:58.452261 [debug] [Thread-2  ]: Finished running node test.dbtlearn2.consistent_created_at
+[0m09:00:58.452418 [debug] [Thread-2  ]: Began running node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:00:58.452546 [info ] [Thread-2  ]: 7 of 9 START test positive_value_dim_listings_cleansed_minimum_nights .......... [RUN]
+[0m09:00:58.452959 [debug] [Thread-2  ]: Acquiring new snowflake connection "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"
+[0m09:00:58.453292 [debug] [Thread-2  ]: Began compiling node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:00:58.453436 [debug] [Thread-2  ]: Compiling test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:00:58.456699 [debug] [Thread-2  ]: Writing injected SQL for node "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"
+[0m09:00:58.457110 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:00:58.457227 [debug] [Thread-2  ]: Began executing node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:00:58.458866 [debug] [Thread-2  ]: Writing runtime sql for node "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"
+[0m09:00:58.459404 [debug] [Thread-2  ]: Using snowflake connection "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"
+[0m09:00:58.459507 [debug] [Thread-2  ]: On test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    SELECT
+    *
+    FROM
+    airbnb.dev.dim_listings_cleansed
+    WHERE
+    minimum_nights < 1
+
+      
+    ) dbt_internal_test
+[0m09:00:58.459598 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m09:00:58.535222 [info ] [Thread-3  ]: 3 of 9 PASS dim_listings_minimum_nights ........................................ [[32mPASS[0m in 1.79s]
+[0m09:00:58.535954 [debug] [Thread-3  ]: Finished running node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:00:58.536126 [debug] [Thread-3  ]: Began running node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:00:58.536323 [info ] [Thread-3  ]: 8 of 9 START test relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_  [RUN]
+[0m09:00:58.536800 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m09:00:58.536922 [debug] [Thread-3  ]: Began compiling node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:00:58.537039 [debug] [Thread-3  ]: Compiling test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:00:58.541390 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m09:00:58.541824 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:00:58.541938 [debug] [Thread-3  ]: Began executing node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:00:58.543625 [debug] [Thread-3  ]: Writing runtime sql for node "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m09:00:58.544402 [debug] [Thread-3  ]: Using snowflake connection "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m09:00:58.544503 [debug] [Thread-3  ]: On test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select host_id as from_field
+    from airbnb.dev.dim_listings_cleansed
+    where host_id is not null
+),
+
+parent as (
+    select host_id as to_field
+    from airbnb.dev.dim_hosts_cleansed
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m09:00:58.544593 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m09:00:58.621741 [debug] [Thread-6  ]: SQL status: SUCCESS 1 in 1.81 seconds
+[0m09:00:58.623208 [debug] [Thread-5  ]: SQL status: SUCCESS 1 in 1.81 seconds
+[0m09:00:58.624656 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:00:58.626143 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:00:58.626305 [debug] [Thread-6  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9: Close
+[0m09:00:58.626434 [debug] [Thread-5  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be: Close
+[0m09:00:58.628732 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 0.26 seconds
+[0m09:00:58.630013 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:00:58.631224 [debug] [Thread-4  ]: On test.dbtlearn2.no_nulls_in_dim_listings: Close
+[0m09:00:58.670723 [info ] [Thread-1  ]: 1 of 9 PASS accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room  [[32mPASS[0m in 1.92s]
+[0m09:00:58.671188 [debug] [Thread-1  ]: Finished running node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:00:58.671382 [debug] [Thread-1  ]: Began running node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:00:58.671551 [info ] [Thread-1  ]: 9 of 9 START test unique_dim_listings_cleansed_listing_id ...................... [RUN]
+[0m09:00:58.671974 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m09:00:58.672099 [debug] [Thread-1  ]: Began compiling node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:00:58.672207 [debug] [Thread-1  ]: Compiling test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:00:58.677301 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m09:00:58.677683 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:00:58.677801 [debug] [Thread-1  ]: Began executing node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:00:58.679587 [debug] [Thread-1  ]: Writing runtime sql for node "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m09:00:58.680243 [debug] [Thread-1  ]: Using snowflake connection "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m09:00:58.680345 [debug] [Thread-1  ]: On test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    listing_id as unique_field,
+    count(*) as n_records
+
+from airbnb.dev.dim_listings_cleansed
+where listing_id is not null
+group by listing_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m09:00:58.680434 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m09:00:59.030510 [info ] [Thread-5  ]: 5 of 9 PASS not_null_dim_listings_cleansed_host_id ............................. [[32mPASS[0m in 2.28s]
+[0m09:00:59.037290 [info ] [Thread-6  ]: 6 of 9 PASS not_null_dim_listings_cleansed_listing_id .......................... [[32mPASS[0m in 2.29s]
+[0m09:00:59.051744 [debug] [Thread-5  ]: Finished running node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:00:59.059070 [info ] [Thread-4  ]: 4 of 9 PASS no_nulls_in_dim_listings ........................................... [[32mPASS[0m in 2.31s]
+[0m09:00:59.060385 [debug] [Thread-6  ]: Finished running node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:00:59.080526 [debug] [Thread-4  ]: Finished running node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:00:59.555758 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 1.01 seconds
+[0m09:00:59.559761 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:00:59.560002 [debug] [Thread-3  ]: On test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad: Close
+[0m09:00:59.581104 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 1.12 seconds
+[0m09:00:59.583317 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:00:59.583514 [debug] [Thread-2  ]: On test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313: Close
+[0m09:00:59.842438 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.16 seconds
+[0m09:00:59.844932 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:00:59.845258 [debug] [Thread-1  ]: On test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e: Close
+[0m09:00:59.963808 [info ] [Thread-3  ]: 8 of 9 PASS relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_  [[32mPASS[0m in 1.43s]
+[0m09:00:59.964794 [debug] [Thread-3  ]: Finished running node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:00:59.980367 [info ] [Thread-2  ]: 7 of 9 PASS positive_value_dim_listings_cleansed_minimum_nights ................ [[32mPASS[0m in 1.53s]
+[0m09:00:59.980688 [debug] [Thread-2  ]: Finished running node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:01:00.254439 [info ] [Thread-1  ]: 9 of 9 PASS unique_dim_listings_cleansed_listing_id ............................ [[32mPASS[0m in 1.58s]
+[0m09:01:00.254961 [debug] [Thread-1  ]: Finished running node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:01:00.256357 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:01:00.256803 [info ] [MainThread]: 
+[0m09:01:00.257003 [info ] [MainThread]: Finished running 9 tests in 0 hours 0 minutes and 5.44 seconds (5.44s).
+[0m09:01:00.257196 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:01:00.257294 [debug] [MainThread]: Connection 'test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e' was properly closed.
+[0m09:01:00.257377 [debug] [MainThread]: Connection 'test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313' was properly closed.
+[0m09:01:00.257459 [debug] [MainThread]: Connection 'test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad' was properly closed.
+[0m09:01:00.257548 [debug] [MainThread]: Connection 'test.dbtlearn2.no_nulls_in_dim_listings' was properly closed.
+[0m09:01:00.257628 [debug] [MainThread]: Connection 'test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be' was properly closed.
+[0m09:01:00.257704 [debug] [MainThread]: Connection 'test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9' was properly closed.
+[0m09:01:00.264489 [info ] [MainThread]: 
+[0m09:01:00.264758 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:01:00.264952 [info ] [MainThread]: 
+[0m09:01:00.265102 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=0 SKIP=0 TOTAL=9
+[0m09:01:00.265346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fef79107400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fef7911f160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fef8015b550>]}
+[0m09:01:00.265535 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-07 09:04:21.208454 | ab91643f-1672-4cd2-93c4-fa69c89a6fa6 ==============================
+[0m09:04:21.208470 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:04:21.208975 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+[0m09:04:21.209094 [debug] [MainThread]: Tracking: tracking
+[0m09:04:21.231910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb8d250e7f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb8d250e760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb8d25823d0>]}
+[0m09:04:21.233701 [debug] [MainThread]: Set downloads directory='/var/folders/7n/d5lb7n6j3ms6h34485_0_gk80000gp/T/dbt-downloads-6bxqs__7'
+[0m09:04:21.234226 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m09:04:22.111342 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m09:04:22.111856 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m09:04:22.962600 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m09:04:22.996910 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m09:04:24.310538 [info ] [MainThread]:   Installed from version 1.0.0
+[0m09:04:24.310820 [info ] [MainThread]:   Up to date!
+[0m09:04:24.311066 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ab91643f-1672-4cd2-93c4-fa69c89a6fa6', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb8a0501580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb8a0501130>]}
+[0m09:04:24.311657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb8a04fe760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb8d250e760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb8a05013d0>]}
+[0m09:04:24.311815 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-07 09:08:16.615201 | 115ef3ae-63d0-4f6b-a091-d6741aade703 ==============================
+[0m09:08:16.615232 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:08:16.616146 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m09:08:16.616317 [debug] [MainThread]: Tracking: tracking
+[0m09:08:16.616651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9183860d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd918386130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd918386190>]}
+[0m09:08:16.651278 [info ] [MainThread]: Unable to do partial parsing because a project dependency has been added
+[0m09:08:16.651597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '115ef3ae-63d0-4f6b-a091-d6741aade703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd918386580>]}
+[0m09:08:16.684974 [debug] [MainThread]: Parsing macros/positive_value.sql
+[0m09:08:16.685760 [debug] [MainThread]: Parsing macros/no_nulls_in_columns.sql
+[0m09:08:16.686396 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m09:08:16.687952 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m09:08:16.720560 [debug] [MainThread]: Parsing macros/apply_grants.sql
+[0m09:08:16.721501 [debug] [MainThread]: Parsing macros/materializations/test.sql
+[0m09:08:16.722191 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+[0m09:08:16.725032 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+[0m09:08:16.729036 [debug] [MainThread]: Parsing macros/materializations/view.sql
+[0m09:08:16.730022 [debug] [MainThread]: Parsing macros/materializations/table.sql
+[0m09:08:16.734271 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+[0m09:08:16.741903 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+[0m09:08:16.742640 [debug] [MainThread]: Parsing macros/utils/timestamps.sql
+[0m09:08:16.743894 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m09:08:16.744290 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m09:08:16.744718 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m09:08:16.745044 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m09:08:16.745327 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m09:08:16.745666 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m09:08:16.748321 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m09:08:16.750105 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m09:08:16.751281 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m09:08:16.762534 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m09:08:16.772267 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m09:08:16.781215 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m09:08:16.784537 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m09:08:16.786163 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m09:08:16.787501 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m09:08:16.793133 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m09:08:16.805049 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m09:08:16.806200 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m09:08:16.811001 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m09:08:16.818649 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m09:08:16.831334 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m09:08:16.835380 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m09:08:16.837803 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m09:08:16.841702 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m09:08:16.842705 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m09:08:16.844972 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m09:08:16.846470 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m09:08:16.851533 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m09:08:16.865408 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m09:08:16.866623 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m09:08:16.868312 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m09:08:16.869336 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m09:08:16.869918 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m09:08:16.870433 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m09:08:16.870883 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m09:08:16.871802 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m09:08:16.875448 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m09:08:16.881722 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m09:08:16.882524 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m09:08:16.883447 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m09:08:16.884076 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m09:08:16.884695 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m09:08:16.885512 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m09:08:16.886175 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m09:08:16.886993 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m09:08:16.887847 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m09:08:16.889502 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m09:08:16.890356 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m09:08:16.891098 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m09:08:16.891877 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m09:08:16.892556 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m09:08:16.893171 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m09:08:16.893911 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m09:08:16.894546 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m09:08:16.899831 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m09:08:16.900583 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m09:08:16.901184 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m09:08:16.902336 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m09:08:16.903823 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m09:08:16.904540 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m09:08:16.905560 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m09:08:16.906265 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m09:08:16.907703 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m09:08:16.909861 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m09:08:16.911705 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m09:08:16.922277 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m09:08:16.923672 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m09:08:16.933135 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m09:08:16.936221 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m09:08:16.941156 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m09:08:16.948085 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m09:08:16.952401 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m09:08:16.954697 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+[0m09:08:16.956381 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+[0m09:08:16.958087 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+[0m09:08:16.959113 [debug] [MainThread]: Parsing macros/generic_tests/fewer_rows_than.sql
+[0m09:08:16.962218 [debug] [MainThread]: Parsing macros/generic_tests/equal_rowcount.sql
+[0m09:08:16.965493 [debug] [MainThread]: Parsing macros/generic_tests/relationships_where.sql
+[0m09:08:16.967235 [debug] [MainThread]: Parsing macros/generic_tests/recency.sql
+[0m09:08:16.969820 [debug] [MainThread]: Parsing macros/generic_tests/not_constant.sql
+[0m09:08:16.971287 [debug] [MainThread]: Parsing macros/generic_tests/accepted_range.sql
+[0m09:08:16.972953 [debug] [MainThread]: Parsing macros/generic_tests/not_accepted_values.sql
+[0m09:08:16.974586 [debug] [MainThread]: Parsing macros/generic_tests/at_least_one.sql
+[0m09:08:16.976126 [debug] [MainThread]: Parsing macros/generic_tests/unique_combination_of_columns.sql
+[0m09:08:16.978172 [debug] [MainThread]: Parsing macros/generic_tests/cardinality_equality.sql
+[0m09:08:16.979589 [debug] [MainThread]: Parsing macros/generic_tests/expression_is_true.sql
+[0m09:08:16.980772 [debug] [MainThread]: Parsing macros/generic_tests/not_null_proportion.sql
+[0m09:08:16.983008 [debug] [MainThread]: Parsing macros/generic_tests/sequential_values.sql
+[0m09:08:16.985861 [debug] [MainThread]: Parsing macros/generic_tests/equality.sql
+[0m09:08:16.988446 [debug] [MainThread]: Parsing macros/generic_tests/not_empty_string.sql
+[0m09:08:16.989741 [debug] [MainThread]: Parsing macros/generic_tests/mutually_exclusive_ranges.sql
+[0m09:08:16.997261 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+[0m09:08:16.998101 [debug] [MainThread]: Parsing macros/jinja_helpers/_is_relation.sql
+[0m09:08:16.998944 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+[0m09:08:16.999807 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+[0m09:08:17.000531 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+[0m09:08:17.001524 [debug] [MainThread]: Parsing macros/jinja_helpers/_is_ephemeral.sql
+[0m09:08:17.002991 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+[0m09:08:17.006394 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+[0m09:08:17.007801 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+[0m09:08:17.010627 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+[0m09:08:17.013500 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+[0m09:08:17.016063 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+[0m09:08:17.017349 [debug] [MainThread]: Parsing macros/sql/star.sql
+[0m09:08:17.021608 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+[0m09:08:17.026376 [debug] [MainThread]: Parsing macros/sql/safe_divide.sql
+[0m09:08:17.027279 [debug] [MainThread]: Parsing macros/sql/union.sql
+[0m09:08:17.036985 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+[0m09:08:17.037950 [debug] [MainThread]: Parsing macros/sql/deduplicate.sql
+[0m09:08:17.040565 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+[0m09:08:17.041641 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+[0m09:08:17.043077 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+[0m09:08:17.044136 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+[0m09:08:17.049204 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+[0m09:08:17.053123 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+[0m09:08:17.055917 [debug] [MainThread]: Parsing macros/sql/get_filtered_columns_in_relation.sql
+[0m09:08:17.057924 [debug] [MainThread]: Parsing macros/sql/width_bucket.sql
+[0m09:08:17.061858 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+[0m09:08:17.063535 [debug] [MainThread]: Parsing macros/sql/generate_surrogate_key.sql
+[0m09:08:17.065329 [debug] [MainThread]: Parsing macros/sql/get_table_types_sql.sql
+[0m09:08:17.066411 [debug] [MainThread]: Parsing macros/sql/get_single_value.sql
+[0m09:08:17.068429 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+[0m09:08:17.408146 [debug] [MainThread]: 1699: static parser successfully parsed dim/dim_listings_w_hosts.sql
+[0m09:08:17.417151 [debug] [MainThread]: 1699: static parser successfully parsed dim/dim_listings_cleansed.sql
+[0m09:08:17.419834 [debug] [MainThread]: 1699: static parser successfully parsed dim/dim_hosts_cleansed.sql
+[0m09:08:17.422001 [debug] [MainThread]: 1603: static parser failed on fct/fct_reviews.sql
+[0m09:08:17.438794 [debug] [MainThread]: 1602: parser fallback to jinja rendering on fct/fct_reviews.sql
+[0m09:08:17.440171 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_fullmoon_reviews.sql
+[0m09:08:17.442194 [debug] [MainThread]: 1699: static parser successfully parsed src/src_reviews.sql
+[0m09:08:17.443973 [debug] [MainThread]: 1699: static parser successfully parsed src/src_listings.sql
+[0m09:08:17.445966 [debug] [MainThread]: 1699: static parser successfully parsed src/src_hosts.sql
+[0m09:08:17.594499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '115ef3ae-63d0-4f6b-a091-d6741aade703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9101cef10>]}
+[0m09:08:17.603185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '115ef3ae-63d0-4f6b-a091-d6741aade703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9183a45e0>]}
+[0m09:08:17.603503 [info ] [MainThread]: Found 8 models, 9 tests, 2 snapshots, 0 analyses, 417 macros, 0 operations, 1 seed file, 3 sources, 0 exposures, 0 metrics
+[0m09:08:17.603701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '115ef3ae-63d0-4f6b-a091-d6741aade703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9101d1e80>]}
+[0m09:08:17.605163 [info ] [MainThread]: 
+[0m09:08:17.605669 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:08:17.606597 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb"
+[0m09:08:17.618213 [debug] [ThreadPool]: Using snowflake connection "list_airbnb"
+[0m09:08:17.618518 [debug] [ThreadPool]: On list_airbnb: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb"} */
+show terse schemas in database airbnb
+    limit 10000
+[0m09:08:17.618645 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:08:19.239260 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.62 seconds
+[0m09:08:19.245728 [debug] [ThreadPool]: On list_airbnb: Close
+[0m09:08:20.088776 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb_dev"
+[0m09:08:20.109032 [debug] [ThreadPool]: Using snowflake connection "list_airbnb_dev"
+[0m09:08:20.109308 [debug] [ThreadPool]: On list_airbnb_dev: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb_dev"} */
+show terse objects in airbnb.dev
+[0m09:08:20.109411 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:08:21.248521 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.14 seconds
+[0m09:08:21.255829 [debug] [ThreadPool]: On list_airbnb_dev: Close
+[0m09:08:21.678102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '115ef3ae-63d0-4f6b-a091-d6741aade703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9289fa220>]}
+[0m09:08:21.681737 [info ] [MainThread]: Concurrency: 6 threads (target='dev')
+[0m09:08:21.682840 [info ] [MainThread]: 
+[0m09:08:21.698927 [debug] [Thread-1  ]: Began running node model.dbtlearn2.src_hosts
+[0m09:08:21.702443 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbtlearn2.src_hosts"
+[0m09:08:21.703043 [debug] [Thread-2  ]: Began running node model.dbtlearn2.src_listings
+[0m09:08:21.703498 [debug] [Thread-1  ]: Began compiling node model.dbtlearn2.src_hosts
+[0m09:08:21.704174 [debug] [Thread-3  ]: Began running node model.dbtlearn2.src_reviews
+[0m09:08:21.705225 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.dbtlearn2.src_listings"
+[0m09:08:21.705617 [debug] [Thread-1  ]: Compiling model.dbtlearn2.src_hosts
+[0m09:08:21.707051 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbtlearn2.src_reviews"
+[0m09:08:21.707358 [debug] [Thread-2  ]: Began compiling node model.dbtlearn2.src_listings
+[0m09:08:21.710502 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbtlearn2.src_hosts"
+[0m09:08:21.710779 [debug] [Thread-3  ]: Began compiling node model.dbtlearn2.src_reviews
+[0m09:08:21.710994 [debug] [Thread-2  ]: Compiling model.dbtlearn2.src_listings
+[0m09:08:21.711277 [debug] [Thread-3  ]: Compiling model.dbtlearn2.src_reviews
+[0m09:08:21.713642 [debug] [Thread-2  ]: Writing injected SQL for node "model.dbtlearn2.src_listings"
+[0m09:08:21.716072 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbtlearn2.src_reviews"
+[0m09:08:21.716341 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:08:21.717167 [debug] [Thread-1  ]: Finished running node model.dbtlearn2.src_hosts
+[0m09:08:21.717347 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:08:21.718055 [debug] [Thread-2  ]: Finished running node model.dbtlearn2.src_listings
+[0m09:08:21.718161 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:08:21.718270 [debug] [Thread-5  ]: Began running node model.dbtlearn2.dim_hosts_cleansed
+[0m09:08:21.718530 [debug] [Thread-4  ]: Began running node model.dbtlearn2.dim_listings_cleansed
+[0m09:08:21.718933 [debug] [Thread-3  ]: Finished running node model.dbtlearn2.src_reviews
+[0m09:08:21.719162 [info ] [Thread-5  ]: 1 of 5 START sql view model dev.dim_hosts_cleansed ............................. [RUN]
+[0m09:08:21.719370 [info ] [Thread-4  ]: 2 of 5 START sql view model dev.dim_listings_cleansed .......................... [RUN]
+[0m09:08:21.719669 [debug] [Thread-6  ]: Began running node model.dbtlearn2.fct_reviews
+[0m09:08:21.720178 [debug] [Thread-5  ]: Acquiring new snowflake connection "model.dbtlearn2.dim_hosts_cleansed"
+[0m09:08:21.720626 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbtlearn2.dim_listings_cleansed"
+[0m09:08:21.720803 [info ] [Thread-6  ]: 3 of 5 START sql incremental model dev.fct_reviews ............................. [RUN]
+[0m09:08:21.720951 [debug] [Thread-5  ]: Began compiling node model.dbtlearn2.dim_hosts_cleansed
+[0m09:08:21.721056 [debug] [Thread-4  ]: Began compiling node model.dbtlearn2.dim_listings_cleansed
+[0m09:08:21.721504 [debug] [Thread-6  ]: Acquiring new snowflake connection "model.dbtlearn2.fct_reviews"
+[0m09:08:21.721699 [debug] [Thread-5  ]: Compiling model.dbtlearn2.dim_hosts_cleansed
+[0m09:08:21.721871 [debug] [Thread-4  ]: Compiling model.dbtlearn2.dim_listings_cleansed
+[0m09:08:21.722003 [debug] [Thread-6  ]: Began compiling node model.dbtlearn2.fct_reviews
+[0m09:08:21.734809 [debug] [Thread-5  ]: Writing injected SQL for node "model.dbtlearn2.dim_hosts_cleansed"
+[0m09:08:21.742695 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbtlearn2.dim_listings_cleansed"
+[0m09:08:21.743025 [debug] [Thread-6  ]: Compiling model.dbtlearn2.fct_reviews
+[0m09:08:21.748934 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:08:21.755460 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:08:21.756838 [debug] [Thread-6  ]: Writing injected SQL for node "model.dbtlearn2.fct_reviews"
+[0m09:08:21.757080 [debug] [Thread-5  ]: Began executing node model.dbtlearn2.dim_hosts_cleansed
+[0m09:08:21.757276 [debug] [Thread-4  ]: Began executing node model.dbtlearn2.dim_listings_cleansed
+[0m09:08:21.775538 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:08:21.780768 [debug] [Thread-5  ]: Writing runtime sql for node "model.dbtlearn2.dim_hosts_cleansed"
+[0m09:08:21.784208 [debug] [Thread-4  ]: Writing runtime sql for node "model.dbtlearn2.dim_listings_cleansed"
+[0m09:08:21.784551 [debug] [Thread-6  ]: Began executing node model.dbtlearn2.fct_reviews
+[0m09:08:21.854088 [debug] [Thread-4  ]: Using snowflake connection "model.dbtlearn2.dim_listings_cleansed"
+[0m09:08:21.861216 [debug] [Thread-5  ]: Using snowflake connection "model.dbtlearn2.dim_hosts_cleansed"
+[0m09:08:21.864274 [debug] [Thread-6  ]: Using snowflake connection "model.dbtlearn2.fct_reviews"
+[0m09:08:21.864599 [debug] [Thread-4  ]: On model.dbtlearn2.dim_listings_cleansed: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "model.dbtlearn2.dim_listings_cleansed"} */
+create or replace  view airbnb.dev.dim_listings_cleansed
+  
+   as (
+    
+
+With  __dbt__cte__src_listings as (
+WITH raw_listings AS (
+ SELECT
+ *
+ FROM
+airbnb.raw.raw_listings
+)
+SELECT
+ id AS listing_id,
+ name AS listing_name,
+ listing_url,
+ room_type,
+ minimum_nights,
+ host_id,
+ price AS price_str,
+ created_at,
+ updated_at
+FROM
+ raw_listings
+),src_listings as (
+    select * from __dbt__cte__src_listings)
+
+    select listing_id, listing_name, 
+    room_type,
+    CASE
+        when minimum_nights=0 then 1
+        else minimum_nights
+    end as minimum_nights,
+    host_id,
+    replace(price_str,'$')::NUMBER(10,2) as price,
+    created_at,
+    updated_at
+    
+    from src_listings
+  );
+[0m09:08:21.864761 [debug] [Thread-5  ]: On model.dbtlearn2.dim_hosts_cleansed: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "model.dbtlearn2.dim_hosts_cleansed"} */
+create or replace  view airbnb.dev.dim_hosts_cleansed
+  
+   as (
+    
+
+With  __dbt__cte__src_hosts as (
+with raw_hosts as (
+select *
+    from airbnb.raw.raw_hosts
+
+)
+
+select ID as host_id, NAME as host_name, IS_SUPERHOST, CREATED_AT, UPDATED_AT
+
+from raw_hosts
+),src_hosts as (
+    select * from __dbt__cte__src_hosts)
+
+    select host_id, NVL(host_name, 'Anonymous') as host_name,
+    IS_SUPERHOST, CREATED_AT, UPDATED_AT
+    
+    from src_hosts
+  );
+[0m09:08:21.864888 [debug] [Thread-6  ]: On model.dbtlearn2.fct_reviews: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "model.dbtlearn2.fct_reviews"} */
+create or replace  view airbnb.dev.fct_reviews__dbt_tmp
+  
+   as (
+    
+WITH  __dbt__cte__src_reviews as (
+with src_reviews as (
+select LISTING_ID, DATE as review_date, REVIEWER_NAME, COMMENTS as review_text,
+SENTIMENT as review_sentiment from airbnb.raw.raw_reviews)
+select * from src_reviews
+),src_reviews AS (
+ SELECT * FROM __dbt__cte__src_reviews
+)
+SELECT 
+
+    
+md5(cast(coalesce(cast(listing_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(review_date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(reviewer_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(review_text as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)),
+*
+
+ FROM src_reviews
+WHERE review_text is not null
+
+ AND review_date > (select max(review_date) from airbnb.dev.fct_reviews)
+ 
+ 
+  );
+[0m09:08:21.865014 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m09:08:21.865159 [debug] [Thread-5  ]: Opening a new connection, currently in state init
+[0m09:08:21.865304 [debug] [Thread-6  ]: Opening a new connection, currently in state init
+[0m09:08:23.324517 [debug] [Thread-5  ]: SQL status: SUCCESS 1 in 1.46 seconds
+[0m09:08:23.339595 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 1.47 seconds
+[0m09:08:23.370796 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:08:23.371993 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:08:23.372245 [debug] [Thread-5  ]: On model.dbtlearn2.dim_hosts_cleansed: Close
+[0m09:08:23.372410 [debug] [Thread-4  ]: On model.dbtlearn2.dim_listings_cleansed: Close
+[0m09:08:23.462418 [debug] [Thread-6  ]: Snowflake adapter: Snowflake query id: 01aa2b04-0000-f5fc-0003-6dd200014156
+[0m09:08:23.462954 [debug] [Thread-6  ]: Snowflake adapter: Snowflake error: 002022 (42601): SQL compilation error:
+Missing column specification
+[0m09:08:23.463851 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:08:23.464103 [debug] [Thread-6  ]: On model.dbtlearn2.fct_reviews: Close
+[0m09:08:23.778836 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '115ef3ae-63d0-4f6b-a091-d6741aade703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8f8138ee0>]}
+[0m09:08:23.780505 [debug] [Thread-5  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '115ef3ae-63d0-4f6b-a091-d6741aade703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9289ff4f0>]}
+[0m09:08:23.781678 [info ] [Thread-4  ]: 2 of 5 OK created sql view model dev.dim_listings_cleansed ..................... [[32mSUCCESS 1[0m in 2.06s]
+[0m09:08:23.783734 [info ] [Thread-5  ]: 1 of 5 OK created sql view model dev.dim_hosts_cleansed ........................ [[32mSUCCESS 1[0m in 2.06s]
+[0m09:08:23.785532 [debug] [Thread-4  ]: Finished running node model.dbtlearn2.dim_listings_cleansed
+[0m09:08:23.786170 [debug] [Thread-5  ]: Finished running node model.dbtlearn2.dim_hosts_cleansed
+[0m09:08:23.787606 [debug] [Thread-1  ]: Began running node model.dbtlearn2.dim_listings_w_hosts
+[0m09:08:23.788225 [info ] [Thread-1  ]: 4 of 5 START sql table model dev.dim_listings_w_hosts .......................... [RUN]
+[0m09:08:23.789666 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbtlearn2.dim_listings_w_hosts"
+[0m09:08:23.790760 [debug] [Thread-1  ]: Began compiling node model.dbtlearn2.dim_listings_w_hosts
+[0m09:08:23.791509 [debug] [Thread-1  ]: Compiling model.dbtlearn2.dim_listings_w_hosts
+[0m09:08:23.796796 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbtlearn2.dim_listings_w_hosts"
+[0m09:08:23.797368 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:08:23.797498 [debug] [Thread-1  ]: Began executing node model.dbtlearn2.dim_listings_w_hosts
+[0m09:08:23.814191 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbtlearn2.dim_listings_w_hosts"
+[0m09:08:23.815898 [debug] [Thread-1  ]: Using snowflake connection "model.dbtlearn2.dim_listings_w_hosts"
+[0m09:08:23.816089 [debug] [Thread-1  ]: On model.dbtlearn2.dim_listings_w_hosts: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "model.dbtlearn2.dim_listings_w_hosts"} */
+create or replace transient table airbnb.dev.dim_listings_w_hosts  as
+        (WITH
+l AS (
+ SELECT
+ *
+ FROM
+ airbnb.dev.dim_listings_cleansed
+),
+h AS (
+ SELECT *
+ FROM airbnb.dev.dim_hosts_cleansed
+)
+SELECT
+ l.listing_id,
+ l.listing_name,
+ l.room_type,
+ l.minimum_nights,
+ l.price,
+ l.host_id,
+ h.host_name,
+ h.is_superhost as host_is_superhost,
+ l.created_at,
+ GREATEST(l.updated_at, h.updated_at) as updated_at
+FROM l
+LEFT JOIN h ON (h.host_id = l.host_id)
+        );
+[0m09:08:23.816191 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m09:08:23.848984 [debug] [Thread-6  ]: Database Error in model fct_reviews (models/fct/fct_reviews.sql)
+  002022 (42601): SQL compilation error:
+  Missing column specification
+[0m09:08:23.849366 [debug] [Thread-6  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '115ef3ae-63d0-4f6b-a091-d6741aade703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8f8140610>]}
+[0m09:08:23.849633 [error] [Thread-6  ]: 3 of 5 ERROR creating sql incremental model dev.fct_reviews .................... [[31mERROR[0m in 2.13s]
+[0m09:08:23.849928 [debug] [Thread-6  ]: Finished running node model.dbtlearn2.fct_reviews
+[0m09:08:23.850210 [debug] [Thread-2  ]: Began running node model.dbtlearn2.mart_fullmoon_reviews
+[0m09:08:23.850325 [info ] [Thread-2  ]: 5 of 5 SKIP relation dev.mart_fullmoon_reviews ................................. [[33mSKIP[0m]
+[0m09:08:23.850537 [debug] [Thread-2  ]: Finished running node model.dbtlearn2.mart_fullmoon_reviews
+[0m09:08:26.525488 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.71 seconds
+[0m09:08:26.542314 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:08:26.542763 [debug] [Thread-1  ]: On model.dbtlearn2.dim_listings_w_hosts: Close
+[0m09:08:26.938864 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '115ef3ae-63d0-4f6b-a091-d6741aade703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9086c16a0>]}
+[0m09:08:26.940294 [info ] [Thread-1  ]: 4 of 5 OK created sql table model dev.dim_listings_w_hosts ..................... [[32mSUCCESS 1[0m in 3.15s]
+[0m09:08:26.941740 [debug] [Thread-1  ]: Finished running node model.dbtlearn2.dim_listings_w_hosts
+[0m09:08:26.946030 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:08:26.947687 [info ] [MainThread]: 
+[0m09:08:26.948462 [info ] [MainThread]: Finished running 2 view models, 1 incremental model, 2 table models in 0 hours 0 minutes and 9.34 seconds (9.34s).
+[0m09:08:26.949161 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:08:26.950228 [debug] [MainThread]: Connection 'model.dbtlearn2.dim_listings_w_hosts' was properly closed.
+[0m09:08:26.950554 [debug] [MainThread]: Connection 'model.dbtlearn2.src_listings' was properly closed.
+[0m09:08:26.950809 [debug] [MainThread]: Connection 'model.dbtlearn2.src_reviews' was properly closed.
+[0m09:08:26.951061 [debug] [MainThread]: Connection 'model.dbtlearn2.dim_hosts_cleansed' was properly closed.
+[0m09:08:26.951372 [debug] [MainThread]: Connection 'model.dbtlearn2.dim_listings_cleansed' was properly closed.
+[0m09:08:26.951641 [debug] [MainThread]: Connection 'model.dbtlearn2.fct_reviews' was properly closed.
+[0m09:08:26.963414 [info ] [MainThread]: 
+[0m09:08:26.963652 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:08:26.963830 [info ] [MainThread]: 
+[0m09:08:26.963985 [error] [MainThread]: [33mDatabase Error in model fct_reviews (models/fct/fct_reviews.sql)[0m
+[0m09:08:26.964142 [error] [MainThread]:   002022 (42601): SQL compilation error:
+[0m09:08:26.964281 [error] [MainThread]:   Missing column specification
+[0m09:08:26.964429 [info ] [MainThread]: 
+[0m09:08:26.964576 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=1 TOTAL=5
+[0m09:08:26.964797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd91022c4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd91022c670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9183b0c70>]}
+[0m09:08:26.964965 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-07 09:08:44.592001 | 2704675e-17cf-46b9-a116-7cb241da1da3 ==============================
+[0m09:08:44.592042 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:08:44.592568 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'full_refresh': True, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m09:08:44.592719 [debug] [MainThread]: Tracking: tracking
+[0m09:08:44.593028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8b31bf0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8b31bf130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8b31bf190>]}
+[0m09:08:44.657703 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:08:44.657944 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:08:44.664354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2704675e-17cf-46b9-a116-7cb241da1da3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8c0d3c0d0>]}
+[0m09:08:44.672358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2704675e-17cf-46b9-a116-7cb241da1da3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8c0cfba90>]}
+[0m09:08:44.672594 [info ] [MainThread]: Found 8 models, 9 tests, 2 snapshots, 0 analyses, 417 macros, 0 operations, 1 seed file, 3 sources, 0 exposures, 0 metrics
+[0m09:08:44.672772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2704675e-17cf-46b9-a116-7cb241da1da3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8c0c0c040>]}
+[0m09:08:44.674184 [info ] [MainThread]: 
+[0m09:08:44.674778 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:08:44.675743 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb"
+[0m09:08:44.686109 [debug] [ThreadPool]: Using snowflake connection "list_airbnb"
+[0m09:08:44.686328 [debug] [ThreadPool]: On list_airbnb: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb"} */
+show terse schemas in database airbnb
+    limit 10000
+[0m09:08:44.686439 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:08:46.099473 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.41 seconds
+[0m09:08:46.101150 [debug] [ThreadPool]: On list_airbnb: Close
+[0m09:08:46.506313 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb_dev"
+[0m09:08:46.511692 [debug] [ThreadPool]: Using snowflake connection "list_airbnb_dev"
+[0m09:08:46.511882 [debug] [ThreadPool]: On list_airbnb_dev: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb_dev"} */
+show terse objects in airbnb.dev
+[0m09:08:46.511978 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:08:47.876126 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.36 seconds
+[0m09:08:47.878630 [debug] [ThreadPool]: On list_airbnb_dev: Close
+[0m09:08:48.288021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2704675e-17cf-46b9-a116-7cb241da1da3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8b31bfdf0>]}
+[0m09:08:48.289100 [info ] [MainThread]: Concurrency: 6 threads (target='dev')
+[0m09:08:48.289358 [info ] [MainThread]: 
+[0m09:08:48.293214 [debug] [Thread-1  ]: Began running node model.dbtlearn2.src_hosts
+[0m09:08:48.293654 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbtlearn2.src_hosts"
+[0m09:08:48.293776 [debug] [Thread-2  ]: Began running node model.dbtlearn2.src_listings
+[0m09:08:48.293879 [debug] [Thread-1  ]: Began compiling node model.dbtlearn2.src_hosts
+[0m09:08:48.293958 [debug] [Thread-3  ]: Began running node model.dbtlearn2.src_reviews
+[0m09:08:48.294308 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.dbtlearn2.src_listings"
+[0m09:08:48.294429 [debug] [Thread-1  ]: Compiling model.dbtlearn2.src_hosts
+[0m09:08:48.294731 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbtlearn2.src_reviews"
+[0m09:08:48.294833 [debug] [Thread-2  ]: Began compiling node model.dbtlearn2.src_listings
+[0m09:08:48.297095 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbtlearn2.src_hosts"
+[0m09:08:48.297239 [debug] [Thread-3  ]: Began compiling node model.dbtlearn2.src_reviews
+[0m09:08:48.297339 [debug] [Thread-2  ]: Compiling model.dbtlearn2.src_listings
+[0m09:08:48.297510 [debug] [Thread-3  ]: Compiling model.dbtlearn2.src_reviews
+[0m09:08:48.299404 [debug] [Thread-2  ]: Writing injected SQL for node "model.dbtlearn2.src_listings"
+[0m09:08:48.299592 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:08:48.301426 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbtlearn2.src_reviews"
+[0m09:08:48.301920 [debug] [Thread-1  ]: Finished running node model.dbtlearn2.src_hosts
+[0m09:08:48.302108 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:08:48.302390 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:08:48.302487 [debug] [Thread-5  ]: Began running node model.dbtlearn2.dim_hosts_cleansed
+[0m09:08:48.302821 [debug] [Thread-2  ]: Finished running node model.dbtlearn2.src_listings
+[0m09:08:48.303171 [debug] [Thread-3  ]: Finished running node model.dbtlearn2.src_reviews
+[0m09:08:48.303338 [info ] [Thread-5  ]: 1 of 5 START sql view model dev.dim_hosts_cleansed ............................. [RUN]
+[0m09:08:48.303592 [debug] [Thread-4  ]: Began running node model.dbtlearn2.dim_listings_cleansed
+[0m09:08:48.303758 [debug] [Thread-6  ]: Began running node model.dbtlearn2.fct_reviews
+[0m09:08:48.304244 [debug] [Thread-5  ]: Acquiring new snowflake connection "model.dbtlearn2.dim_hosts_cleansed"
+[0m09:08:48.304376 [info ] [Thread-4  ]: 2 of 5 START sql view model dev.dim_listings_cleansed .......................... [RUN]
+[0m09:08:48.304537 [info ] [Thread-6  ]: 3 of 5 START sql incremental model dev.fct_reviews ............................. [RUN]
+[0m09:08:48.304653 [debug] [Thread-5  ]: Began compiling node model.dbtlearn2.dim_hosts_cleansed
+[0m09:08:48.305123 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbtlearn2.dim_listings_cleansed"
+[0m09:08:48.305453 [debug] [Thread-6  ]: Acquiring new snowflake connection "model.dbtlearn2.fct_reviews"
+[0m09:08:48.305555 [debug] [Thread-5  ]: Compiling model.dbtlearn2.dim_hosts_cleansed
+[0m09:08:48.305663 [debug] [Thread-4  ]: Began compiling node model.dbtlearn2.dim_listings_cleansed
+[0m09:08:48.305765 [debug] [Thread-6  ]: Began compiling node model.dbtlearn2.fct_reviews
+[0m09:08:48.314917 [debug] [Thread-5  ]: Writing injected SQL for node "model.dbtlearn2.dim_hosts_cleansed"
+[0m09:08:48.315106 [debug] [Thread-4  ]: Compiling model.dbtlearn2.dim_listings_cleansed
+[0m09:08:48.315212 [debug] [Thread-6  ]: Compiling model.dbtlearn2.fct_reviews
+[0m09:08:48.321689 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbtlearn2.dim_listings_cleansed"
+[0m09:08:48.327105 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:08:48.343019 [debug] [Thread-6  ]: Writing injected SQL for node "model.dbtlearn2.fct_reviews"
+[0m09:08:48.343425 [debug] [Thread-5  ]: Began executing node model.dbtlearn2.dim_hosts_cleansed
+[0m09:08:48.343603 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:08:48.360953 [debug] [Thread-4  ]: Began executing node model.dbtlearn2.dim_listings_cleansed
+[0m09:08:48.364209 [debug] [Thread-5  ]: Writing runtime sql for node "model.dbtlearn2.dim_hosts_cleansed"
+[0m09:08:48.366342 [debug] [Thread-4  ]: Writing runtime sql for node "model.dbtlearn2.dim_listings_cleansed"
+[0m09:08:48.366475 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:08:48.366779 [debug] [Thread-6  ]: Began executing node model.dbtlearn2.fct_reviews
+[0m09:08:48.372702 [debug] [Thread-5  ]: Using snowflake connection "model.dbtlearn2.dim_hosts_cleansed"
+[0m09:08:48.378814 [debug] [Thread-4  ]: Using snowflake connection "model.dbtlearn2.dim_listings_cleansed"
+[0m09:08:48.395799 [debug] [Thread-5  ]: On model.dbtlearn2.dim_hosts_cleansed: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "model.dbtlearn2.dim_hosts_cleansed"} */
+create or replace  view airbnb.dev.dim_hosts_cleansed
+  
+   as (
+    
+
+With  __dbt__cte__src_hosts as (
+with raw_hosts as (
+select *
+    from airbnb.raw.raw_hosts
+
+)
+
+select ID as host_id, NAME as host_name, IS_SUPERHOST, CREATED_AT, UPDATED_AT
+
+from raw_hosts
+),src_hosts as (
+    select * from __dbt__cte__src_hosts)
+
+    select host_id, NVL(host_name, 'Anonymous') as host_name,
+    IS_SUPERHOST, CREATED_AT, UPDATED_AT
+    
+    from src_hosts
+  );
+[0m09:08:48.398456 [debug] [Thread-6  ]: Writing runtime sql for node "model.dbtlearn2.fct_reviews"
+[0m09:08:48.398667 [debug] [Thread-4  ]: On model.dbtlearn2.dim_listings_cleansed: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "model.dbtlearn2.dim_listings_cleansed"} */
+create or replace  view airbnb.dev.dim_listings_cleansed
+  
+   as (
+    
+
+With  __dbt__cte__src_listings as (
+WITH raw_listings AS (
+ SELECT
+ *
+ FROM
+airbnb.raw.raw_listings
+)
+SELECT
+ id AS listing_id,
+ name AS listing_name,
+ listing_url,
+ room_type,
+ minimum_nights,
+ host_id,
+ price AS price_str,
+ created_at,
+ updated_at
+FROM
+ raw_listings
+),src_listings as (
+    select * from __dbt__cte__src_listings)
+
+    select listing_id, listing_name, 
+    room_type,
+    CASE
+        when minimum_nights=0 then 1
+        else minimum_nights
+    end as minimum_nights,
+    host_id,
+    replace(price_str,'$')::NUMBER(10,2) as price,
+    created_at,
+    updated_at
+    
+    from src_listings
+  );
+[0m09:08:48.398774 [debug] [Thread-5  ]: Opening a new connection, currently in state init
+[0m09:08:48.398982 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m09:08:48.401271 [debug] [Thread-6  ]: Using snowflake connection "model.dbtlearn2.fct_reviews"
+[0m09:08:48.401695 [debug] [Thread-6  ]: On model.dbtlearn2.fct_reviews: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "model.dbtlearn2.fct_reviews"} */
+create or replace transient table airbnb.dev.fct_reviews  as
+        (
+WITH  __dbt__cte__src_reviews as (
+with src_reviews as (
+select LISTING_ID, DATE as review_date, REVIEWER_NAME, COMMENTS as review_text,
+SENTIMENT as review_sentiment from airbnb.raw.raw_reviews)
+select * from src_reviews
+),src_reviews AS (
+ SELECT * FROM __dbt__cte__src_reviews
+)
+SELECT 
+
+    
+md5(cast(coalesce(cast(listing_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(review_date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(reviewer_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(review_text as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)),
+*
+
+ FROM src_reviews
+WHERE review_text is not null
+
+        );
+[0m09:08:48.402108 [debug] [Thread-6  ]: Opening a new connection, currently in state init
+[0m09:08:49.611033 [debug] [Thread-6  ]: Snowflake adapter: Snowflake query id: 01aa2b04-0000-f61f-0003-6dd200016136
+[0m09:08:49.611367 [debug] [Thread-6  ]: Snowflake adapter: Snowflake error: 002022 (42601): SQL compilation error:
+Missing column specification
+[0m09:08:49.611806 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:08:49.611975 [debug] [Thread-6  ]: On model.dbtlearn2.fct_reviews: Close
+[0m09:08:49.769124 [debug] [Thread-5  ]: SQL status: SUCCESS 1 in 1.37 seconds
+[0m09:08:49.784985 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:08:49.786117 [debug] [Thread-5  ]: On model.dbtlearn2.dim_hosts_cleansed: Close
+[0m09:08:49.795526 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 1.4 seconds
+[0m09:08:49.796825 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:08:49.796973 [debug] [Thread-4  ]: On model.dbtlearn2.dim_listings_cleansed: Close
+[0m09:08:49.988202 [debug] [Thread-6  ]: Database Error in model fct_reviews (models/fct/fct_reviews.sql)
+  002022 (42601): SQL compilation error:
+  Missing column specification
+  compiled Code at target/run/dbtlearn2/models/fct/fct_reviews.sql
+[0m09:08:49.988988 [debug] [Thread-6  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2704675e-17cf-46b9-a116-7cb241da1da3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8c0de4c40>]}
+[0m09:08:49.989400 [error] [Thread-6  ]: 3 of 5 ERROR creating sql incremental model dev.fct_reviews .................... [[31mERROR[0m in 1.68s]
+[0m09:08:49.990067 [debug] [Thread-6  ]: Finished running node model.dbtlearn2.fct_reviews
+[0m09:08:49.990815 [debug] [Thread-3  ]: Began running node model.dbtlearn2.mart_fullmoon_reviews
+[0m09:08:49.991005 [info ] [Thread-3  ]: 4 of 5 SKIP relation dev.mart_fullmoon_reviews ................................. [[33mSKIP[0m]
+[0m09:08:49.991357 [debug] [Thread-3  ]: Finished running node model.dbtlearn2.mart_fullmoon_reviews
+[0m09:08:50.167636 [debug] [Thread-5  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2704675e-17cf-46b9-a116-7cb241da1da3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8b3379f70>]}
+[0m09:08:50.168419 [info ] [Thread-5  ]: 1 of 5 OK created sql view model dev.dim_hosts_cleansed ........................ [[32mSUCCESS 1[0m in 1.86s]
+[0m09:08:50.168819 [debug] [Thread-5  ]: Finished running node model.dbtlearn2.dim_hosts_cleansed
+[0m09:08:50.174643 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2704675e-17cf-46b9-a116-7cb241da1da3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8b3430a00>]}
+[0m09:08:50.175120 [info ] [Thread-4  ]: 2 of 5 OK created sql view model dev.dim_listings_cleansed ..................... [[32mSUCCESS 1[0m in 1.87s]
+[0m09:08:50.175455 [debug] [Thread-4  ]: Finished running node model.dbtlearn2.dim_listings_cleansed
+[0m09:08:50.175954 [debug] [Thread-2  ]: Began running node model.dbtlearn2.dim_listings_w_hosts
+[0m09:08:50.176360 [info ] [Thread-2  ]: 5 of 5 START sql table model dev.dim_listings_w_hosts .......................... [RUN]
+[0m09:08:50.176817 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.dbtlearn2.dim_listings_w_hosts"
+[0m09:08:50.176931 [debug] [Thread-2  ]: Began compiling node model.dbtlearn2.dim_listings_w_hosts
+[0m09:08:50.177031 [debug] [Thread-2  ]: Compiling model.dbtlearn2.dim_listings_w_hosts
+[0m09:08:50.179413 [debug] [Thread-2  ]: Writing injected SQL for node "model.dbtlearn2.dim_listings_w_hosts"
+[0m09:08:50.179807 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:08:50.179914 [debug] [Thread-2  ]: Began executing node model.dbtlearn2.dim_listings_w_hosts
+[0m09:08:50.187947 [debug] [Thread-2  ]: Writing runtime sql for node "model.dbtlearn2.dim_listings_w_hosts"
+[0m09:08:50.189313 [debug] [Thread-2  ]: Using snowflake connection "model.dbtlearn2.dim_listings_w_hosts"
+[0m09:08:50.189440 [debug] [Thread-2  ]: On model.dbtlearn2.dim_listings_w_hosts: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "model.dbtlearn2.dim_listings_w_hosts"} */
+create or replace transient table airbnb.dev.dim_listings_w_hosts  as
+        (WITH
+l AS (
+ SELECT
+ *
+ FROM
+ airbnb.dev.dim_listings_cleansed
+),
+h AS (
+ SELECT *
+ FROM airbnb.dev.dim_hosts_cleansed
+)
+SELECT
+ l.listing_id,
+ l.listing_name,
+ l.room_type,
+ l.minimum_nights,
+ l.price,
+ l.host_id,
+ h.host_name,
+ h.is_superhost as host_is_superhost,
+ l.created_at,
+ GREATEST(l.updated_at, h.updated_at) as updated_at
+FROM l
+LEFT JOIN h ON (h.host_id = l.host_id)
+        );
+[0m09:08:50.189552 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m09:08:52.440567 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 2.25 seconds
+[0m09:08:52.447850 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:08:52.448153 [debug] [Thread-2  ]: On model.dbtlearn2.dim_listings_w_hosts: Close
+[0m09:08:52.865221 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2704675e-17cf-46b9-a116-7cb241da1da3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8c0dbd820>]}
+[0m09:08:52.866013 [info ] [Thread-2  ]: 5 of 5 OK created sql table model dev.dim_listings_w_hosts ..................... [[32mSUCCESS 1[0m in 2.69s]
+[0m09:08:52.866458 [debug] [Thread-2  ]: Finished running node model.dbtlearn2.dim_listings_w_hosts
+[0m09:08:52.867991 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:08:52.868421 [info ] [MainThread]: 
+[0m09:08:52.868600 [info ] [MainThread]: Finished running 1 incremental model, 2 table models, 2 view models in 0 hours 0 minutes and 8.19 seconds (8.19s).
+[0m09:08:52.868761 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:08:52.868848 [debug] [MainThread]: Connection 'model.dbtlearn2.src_hosts' was properly closed.
+[0m09:08:52.868923 [debug] [MainThread]: Connection 'model.dbtlearn2.dim_listings_w_hosts' was properly closed.
+[0m09:08:52.868999 [debug] [MainThread]: Connection 'model.dbtlearn2.src_reviews' was properly closed.
+[0m09:08:52.869076 [debug] [MainThread]: Connection 'model.dbtlearn2.dim_hosts_cleansed' was properly closed.
+[0m09:08:52.869149 [debug] [MainThread]: Connection 'model.dbtlearn2.dim_listings_cleansed' was properly closed.
+[0m09:08:52.869230 [debug] [MainThread]: Connection 'model.dbtlearn2.fct_reviews' was properly closed.
+[0m09:08:52.878740 [info ] [MainThread]: 
+[0m09:08:52.878951 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:08:52.879130 [info ] [MainThread]: 
+[0m09:08:52.879312 [error] [MainThread]: [33mDatabase Error in model fct_reviews (models/fct/fct_reviews.sql)[0m
+[0m09:08:52.879468 [error] [MainThread]:   002022 (42601): SQL compilation error:
+[0m09:08:52.879608 [error] [MainThread]:   Missing column specification
+[0m09:08:52.879743 [error] [MainThread]:   compiled Code at target/run/dbtlearn2/models/fct/fct_reviews.sql
+[0m09:08:52.879897 [info ] [MainThread]: 
+[0m09:08:52.880049 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=1 TOTAL=5
+[0m09:08:52.880330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8b31cb730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8b31d48b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8b34cdd60>]}
+[0m09:08:52.880520 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-07 09:09:41.286926 | 28174863-ce4c-4edc-bc03-2314bc1a18a8 ==============================
+[0m09:09:41.286962 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:09:41.288207 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['fct_reviews'], 'full_refresh': True, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m09:09:41.288447 [debug] [MainThread]: Tracking: tracking
+[0m09:09:41.288794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ee378a160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ee378a1c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ee378a220>]}
+[0m09:09:41.358091 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:09:41.358349 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:09:41.364706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '28174863-ce4c-4edc-bc03-2314bc1a18a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ee38ae0d0>]}
+[0m09:09:41.372320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '28174863-ce4c-4edc-bc03-2314bc1a18a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ec07ecfd0>]}
+[0m09:09:41.372557 [info ] [MainThread]: Found 8 models, 9 tests, 2 snapshots, 0 analyses, 417 macros, 0 operations, 1 seed file, 3 sources, 0 exposures, 0 metrics
+[0m09:09:41.372747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '28174863-ce4c-4edc-bc03-2314bc1a18a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ec06fc100>]}
+[0m09:09:41.373901 [info ] [MainThread]: 
+[0m09:09:41.374344 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:09:41.375145 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb"
+[0m09:09:41.385673 [debug] [ThreadPool]: Using snowflake connection "list_airbnb"
+[0m09:09:41.385905 [debug] [ThreadPool]: On list_airbnb: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb"} */
+show terse schemas in database airbnb
+    limit 10000
+[0m09:09:41.386009 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:09:42.862148 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.48 seconds
+[0m09:09:42.864775 [debug] [ThreadPool]: On list_airbnb: Close
+[0m09:09:43.261440 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb_dev"
+[0m09:09:43.267880 [debug] [ThreadPool]: Using snowflake connection "list_airbnb_dev"
+[0m09:09:43.268047 [debug] [ThreadPool]: On list_airbnb_dev: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb_dev"} */
+show terse objects in airbnb.dev
+[0m09:09:43.268141 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:09:44.459143 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.19 seconds
+[0m09:09:44.462252 [debug] [ThreadPool]: On list_airbnb_dev: Close
+[0m09:09:44.915433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '28174863-ce4c-4edc-bc03-2314bc1a18a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ee37aeaf0>]}
+[0m09:09:44.916452 [info ] [MainThread]: Concurrency: 6 threads (target='dev')
+[0m09:09:44.916717 [info ] [MainThread]: 
+[0m09:09:44.920799 [debug] [Thread-1  ]: Began running node model.dbtlearn2.fct_reviews
+[0m09:09:44.921050 [info ] [Thread-1  ]: 1 of 1 START sql incremental model dev.fct_reviews ............................. [RUN]
+[0m09:09:44.921472 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbtlearn2.fct_reviews"
+[0m09:09:44.921579 [debug] [Thread-1  ]: Began compiling node model.dbtlearn2.fct_reviews
+[0m09:09:44.921678 [debug] [Thread-1  ]: Compiling model.dbtlearn2.fct_reviews
+[0m09:09:44.937616 [debug] [Thread-1  ]: Compiling model.dbtlearn2.src_reviews
+[0m09:09:44.941062 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbtlearn2.src_reviews"
+[0m09:09:44.950593 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbtlearn2.fct_reviews"
+[0m09:09:44.950903 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:09:44.951020 [debug] [Thread-1  ]: Began executing node model.dbtlearn2.fct_reviews
+[0m09:09:44.987414 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbtlearn2.fct_reviews"
+[0m09:09:44.988673 [debug] [Thread-1  ]: Using snowflake connection "model.dbtlearn2.fct_reviews"
+[0m09:09:44.988784 [debug] [Thread-1  ]: On model.dbtlearn2.fct_reviews: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "model.dbtlearn2.fct_reviews"} */
+create or replace transient table airbnb.dev.fct_reviews  as
+        (
+WITH  __dbt__cte__src_reviews as (
+with src_reviews as (
+select LISTING_ID, DATE as review_date, REVIEWER_NAME, COMMENTS as review_text,
+SENTIMENT as review_sentiment from airbnb.raw.raw_reviews)
+select * from src_reviews
+),src_reviews AS (
+ SELECT * FROM __dbt__cte__src_reviews
+)
+SELECT 
+
+    
+md5(cast(coalesce(cast(listing_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(review_date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(reviewer_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(review_text as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)),
+*
+
+ FROM src_reviews
+WHERE review_text is not null
+
+        );
+[0m09:09:44.988874 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m09:09:46.156488 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01aa2b05-0000-f61f-0003-6dd200016142
+[0m09:09:46.156861 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 002022 (42601): SQL compilation error:
+Missing column specification
+[0m09:09:46.157354 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:09:46.157530 [debug] [Thread-1  ]: On model.dbtlearn2.fct_reviews: Close
+[0m09:09:46.551192 [debug] [Thread-1  ]: Database Error in model fct_reviews (models/fct/fct_reviews.sql)
+  002022 (42601): SQL compilation error:
+  Missing column specification
+  compiled Code at target/run/dbtlearn2/models/fct/fct_reviews.sql
+[0m09:09:46.551785 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '28174863-ce4c-4edc-bc03-2314bc1a18a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ed0b398e0>]}
+[0m09:09:46.552122 [error] [Thread-1  ]: 1 of 1 ERROR creating sql incremental model dev.fct_reviews .................... [[31mERROR[0m in 1.63s]
+[0m09:09:46.552686 [debug] [Thread-1  ]: Finished running node model.dbtlearn2.fct_reviews
+[0m09:09:46.554179 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:09:46.554564 [info ] [MainThread]: 
+[0m09:09:46.554740 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 5.18 seconds (5.18s).
+[0m09:09:46.554908 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:09:46.554994 [debug] [MainThread]: Connection 'model.dbtlearn2.fct_reviews' was properly closed.
+[0m09:09:46.562535 [info ] [MainThread]: 
+[0m09:09:46.562740 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:09:46.562910 [info ] [MainThread]: 
+[0m09:09:46.563056 [error] [MainThread]: [33mDatabase Error in model fct_reviews (models/fct/fct_reviews.sql)[0m
+[0m09:09:46.563210 [error] [MainThread]:   002022 (42601): SQL compilation error:
+[0m09:09:46.563346 [error] [MainThread]:   Missing column specification
+[0m09:09:46.563478 [error] [MainThread]:   compiled Code at target/run/dbtlearn2/models/fct/fct_reviews.sql
+[0m09:09:46.563619 [info ] [MainThread]: 
+[0m09:09:46.563788 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m09:09:46.564049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ee399aa30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ee399a760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ee399a1c0>]}
+[0m09:09:46.564213 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-07 09:10:55.254736 | d99ff2dd-0e61-485f-8aab-fed3437a7d5e ==============================
+[0m09:10:55.254891 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:10:55.256326 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['fct_reviews'], 'full_refresh': True, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m09:10:55.256596 [debug] [MainThread]: Tracking: tracking
+[0m09:10:55.256902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe47bbc80d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe47bbc8130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe47bbc8190>]}
+[0m09:10:55.324163 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:10:55.324700 [debug] [MainThread]: Partial parsing: updated file: dbtlearn2://models/fct/fct_reviews.sql
+[0m09:10:55.336641 [debug] [MainThread]: 1603: static parser failed on fct/fct_reviews.sql
+[0m09:10:55.359676 [debug] [MainThread]: 1602: parser fallback to jinja rendering on fct/fct_reviews.sql
+[0m09:10:55.376892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd99ff2dd-0e61-485f-8aab-fed3437a7d5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4a89abe80>]}
+[0m09:10:55.384495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd99ff2dd-0e61-485f-8aab-fed3437a7d5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe47bbe1730>]}
+[0m09:10:55.384740 [info ] [MainThread]: Found 8 models, 9 tests, 2 snapshots, 0 analyses, 417 macros, 0 operations, 1 seed file, 3 sources, 0 exposures, 0 metrics
+[0m09:10:55.384936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd99ff2dd-0e61-485f-8aab-fed3437a7d5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4a890be50>]}
+[0m09:10:55.386068 [info ] [MainThread]: 
+[0m09:10:55.386512 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:10:55.387275 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb"
+[0m09:10:55.397392 [debug] [ThreadPool]: Using snowflake connection "list_airbnb"
+[0m09:10:55.397583 [debug] [ThreadPool]: On list_airbnb: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb"} */
+show terse schemas in database airbnb
+    limit 10000
+[0m09:10:55.397688 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:10:57.016203 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.62 seconds
+[0m09:10:57.020267 [debug] [ThreadPool]: On list_airbnb: Close
+[0m09:10:57.433262 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb_dev"
+[0m09:10:57.439263 [debug] [ThreadPool]: Using snowflake connection "list_airbnb_dev"
+[0m09:10:57.439426 [debug] [ThreadPool]: On list_airbnb_dev: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb_dev"} */
+show terse objects in airbnb.dev
+[0m09:10:57.439520 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:10:58.755439 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.32 seconds
+[0m09:10:58.757468 [debug] [ThreadPool]: On list_airbnb_dev: Close
+[0m09:10:59.146436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd99ff2dd-0e61-485f-8aab-fed3437a7d5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe47bd8c610>]}
+[0m09:10:59.147082 [info ] [MainThread]: Concurrency: 6 threads (target='dev')
+[0m09:10:59.147281 [info ] [MainThread]: 
+[0m09:10:59.151179 [debug] [Thread-1  ]: Began running node model.dbtlearn2.fct_reviews
+[0m09:10:59.151402 [info ] [Thread-1  ]: 1 of 1 START sql incremental model dev.fct_reviews ............................. [RUN]
+[0m09:10:59.152184 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbtlearn2.fct_reviews"
+[0m09:10:59.152427 [debug] [Thread-1  ]: Began compiling node model.dbtlearn2.fct_reviews
+[0m09:10:59.152655 [debug] [Thread-1  ]: Compiling model.dbtlearn2.fct_reviews
+[0m09:10:59.161151 [debug] [Thread-1  ]: Compiling model.dbtlearn2.src_reviews
+[0m09:10:59.163051 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbtlearn2.src_reviews"
+[0m09:10:59.172744 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbtlearn2.fct_reviews"
+[0m09:10:59.173216 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:10:59.173355 [debug] [Thread-1  ]: Began executing node model.dbtlearn2.fct_reviews
+[0m09:10:59.208945 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbtlearn2.fct_reviews"
+[0m09:10:59.210206 [debug] [Thread-1  ]: Using snowflake connection "model.dbtlearn2.fct_reviews"
+[0m09:10:59.210315 [debug] [Thread-1  ]: On model.dbtlearn2.fct_reviews: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "model.dbtlearn2.fct_reviews"} */
+create or replace transient table airbnb.dev.fct_reviews  as
+        (
+WITH  __dbt__cte__src_reviews as (
+with src_reviews as (
+select LISTING_ID, DATE as review_date, REVIEWER_NAME, COMMENTS as review_text,
+SENTIMENT as review_sentiment from airbnb.raw.raw_reviews)
+select * from src_reviews
+),src_reviews AS (
+ SELECT * FROM __dbt__cte__src_reviews
+)
+SELECT 
+
+    
+md5(cast(coalesce(cast(listing_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(review_date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(reviewer_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(review_text as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as review_id,
+*
+
+ FROM src_reviews
+WHERE review_text is not null
+
+        );
+[0m09:10:59.210409 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m09:11:05.535628 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 6.33 seconds
+[0m09:11:05.543735 [debug] [Thread-1  ]: Using snowflake connection "model.dbtlearn2.fct_reviews"
+[0m09:11:05.543962 [debug] [Thread-1  ]: On model.dbtlearn2.fct_reviews: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "model.dbtlearn2.fct_reviews"} */
+drop view if exists airbnb.dev.fct_reviews__dbt_tmp cascade
+[0m09:11:05.757472 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.21 seconds
+[0m09:11:05.784350 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:11:05.784756 [debug] [Thread-1  ]: On model.dbtlearn2.fct_reviews: Close
+[0m09:11:06.188541 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd99ff2dd-0e61-485f-8aab-fed3437a7d5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4a8af5e50>]}
+[0m09:11:06.189401 [info ] [Thread-1  ]: 1 of 1 OK created sql incremental model dev.fct_reviews ........................ [[32mSUCCESS 1[0m in 7.04s]
+[0m09:11:06.190085 [debug] [Thread-1  ]: Finished running node model.dbtlearn2.fct_reviews
+[0m09:11:06.191944 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:11:06.192367 [info ] [MainThread]: 
+[0m09:11:06.192546 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 10.81 seconds (10.81s).
+[0m09:11:06.192724 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:11:06.192811 [debug] [MainThread]: Connection 'model.dbtlearn2.fct_reviews' was properly closed.
+[0m09:11:06.200325 [info ] [MainThread]: 
+[0m09:11:06.200524 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:11:06.200701 [info ] [MainThread]: 
+[0m09:11:06.200844 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m09:11:06.201035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4a89abb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe47bd8c520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4881d0040>]}
+[0m09:11:06.201177 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-07 09:24:12.073397 | 253336e0-4ef7-4cb5-9ec9-6d26e4383348 ==============================
+[0m09:24:12.073455 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:24:12.074264 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m09:24:12.074437 [debug] [MainThread]: Tracking: tracking
+[0m09:24:12.074768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd320771190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3207711f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd320771250>]}
+[0m09:24:12.118957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd320796ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd32086bdc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd32086be50>]}
+[0m09:24:12.119276 [debug] [MainThread]: Flushing usage events
+[0m09:24:12.930597 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading dbtlearn2: schema.yml - Runtime Error
+    Syntax error near line 34
+    ------------------------------
+    31 |       - name: minimum_nights
+    32 |         description: '{{ doc("dim_listing_cleansed__minimum_nights") }}''
+    33 |         tests:
+    34 |           - positive_value
+    
+    Raw Error:
+    ------------------------------
+    while scanning a quoted scalar
+      in "<unicode string>", line 32, column 22
+    found unexpected end of stream
+      in "<unicode string>", line 34, column 27
+
+
+============================== 2023-02-07 09:24:32.387438 | d3d1cf94-447c-4630-8156-ab3ca8c52af3 ==============================
+[0m09:24:32.387482 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:24:32.388094 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m09:24:32.388254 [debug] [MainThread]: Tracking: tracking
+[0m09:24:32.388550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faaab57c0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faaab57c130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faaab57c190>]}
+[0m09:24:32.455446 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:24:32.456019 [debug] [MainThread]: Partial parsing: update schema file: dbtlearn2://models/schema.yml
+[0m09:24:32.469779 [debug] [MainThread]: 1699: static parser successfully parsed dim/dim_listings_cleansed.sql
+[0m09:24:32.517219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faa989b3070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faa9897a2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faa9897ae50>]}
+[0m09:24:32.517505 [debug] [MainThread]: Flushing usage events
+[0m09:24:33.161989 [error] [MainThread]: Encountered an error:
+Compilation Error in model dim_listings_cleansed (models/dim/dim_listings_cleansed.sql)
+  Documentation for 'model.dbtlearn2.dim_listings_cleansed' depends on doc 'dim_listing_cleansed__minimum_nights'  which was not found
+
+
+============================== 2023-02-07 09:24:47.996001 | ca65214e-b2b7-4267-be89-c04c131d7d40 ==============================
+[0m09:24:47.996083 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:24:47.996820 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m09:24:47.996975 [debug] [MainThread]: Tracking: tracking
+[0m09:24:47.997280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe09b572130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe09b572190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe09b5721f0>]}
+[0m09:24:48.064715 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:24:48.065284 [debug] [MainThread]: Partial parsing: update schema file: dbtlearn2://models/schema.yml
+[0m09:24:48.078332 [debug] [MainThread]: 1699: static parser successfully parsed dim/dim_listings_cleansed.sql
+[0m09:24:48.139781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ca65214e-b2b7-4267-be89-c04c131d7d40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0702540d0>]}
+[0m09:24:48.148105 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ca65214e-b2b7-4267-be89-c04c131d7d40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08873ef70>]}
+[0m09:24:48.148386 [info ] [MainThread]: Found 8 models, 9 tests, 2 snapshots, 0 analyses, 417 macros, 0 operations, 1 seed file, 3 sources, 0 exposures, 0 metrics
+[0m09:24:48.148638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ca65214e-b2b7-4267-be89-c04c131d7d40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08873eee0>]}
+[0m09:24:48.150267 [info ] [MainThread]: 
+[0m09:24:48.150775 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:24:48.151693 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb_dev"
+[0m09:24:48.161485 [debug] [ThreadPool]: Using snowflake connection "list_airbnb_dev"
+[0m09:24:48.161687 [debug] [ThreadPool]: On list_airbnb_dev: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb_dev"} */
+show terse objects in airbnb.dev
+[0m09:24:48.161791 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:24:49.676835 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.51 seconds
+[0m09:24:49.679381 [debug] [ThreadPool]: On list_airbnb_dev: Close
+[0m09:24:50.073909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ca65214e-b2b7-4267-be89-c04c131d7d40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe070215490>]}
+[0m09:24:50.074907 [info ] [MainThread]: Concurrency: 6 threads (target='dev')
+[0m09:24:50.075166 [info ] [MainThread]: 
+[0m09:24:50.079994 [debug] [Thread-1  ]: Began running node model.dbtlearn2.src_hosts
+[0m09:24:50.080110 [debug] [Thread-2  ]: Began running node model.dbtlearn2.src_listings
+[0m09:24:50.080207 [debug] [Thread-3  ]: Began running node model.dbtlearn2.src_reviews
+[0m09:24:50.080313 [debug] [Thread-4  ]: Began running node seed.dbtlearn2.seed_full_moon_dates
+[0m09:24:50.080396 [debug] [Thread-5  ]: Began running node snapshot.dbtlearn2.scd_raw_hosts
+[0m09:24:50.080796 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbtlearn2.src_hosts"
+[0m09:24:50.080878 [debug] [Thread-6  ]: Began running node snapshot.dbtlearn2.scd_raw_listings
+[0m09:24:50.081193 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.dbtlearn2.src_listings"
+[0m09:24:50.081534 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbtlearn2.src_reviews"
+[0m09:24:50.081853 [debug] [Thread-4  ]: Acquiring new snowflake connection "seed.dbtlearn2.seed_full_moon_dates"
+[0m09:24:50.082180 [debug] [Thread-5  ]: Acquiring new snowflake connection "snapshot.dbtlearn2.scd_raw_hosts"
+[0m09:24:50.082293 [debug] [Thread-1  ]: Began compiling node model.dbtlearn2.src_hosts
+[0m09:24:50.082592 [debug] [Thread-6  ]: Acquiring new snowflake connection "snapshot.dbtlearn2.scd_raw_listings"
+[0m09:24:50.082695 [debug] [Thread-2  ]: Began compiling node model.dbtlearn2.src_listings
+[0m09:24:50.082792 [debug] [Thread-3  ]: Began compiling node model.dbtlearn2.src_reviews
+[0m09:24:50.082900 [debug] [Thread-4  ]: Began compiling node seed.dbtlearn2.seed_full_moon_dates
+[0m09:24:50.083027 [debug] [Thread-5  ]: Began compiling node snapshot.dbtlearn2.scd_raw_hosts
+[0m09:24:50.083165 [debug] [Thread-1  ]: Compiling model.dbtlearn2.src_hosts
+[0m09:24:50.083267 [debug] [Thread-6  ]: Began compiling node snapshot.dbtlearn2.scd_raw_listings
+[0m09:24:50.083370 [debug] [Thread-2  ]: Compiling model.dbtlearn2.src_listings
+[0m09:24:50.083472 [debug] [Thread-3  ]: Compiling model.dbtlearn2.src_reviews
+[0m09:24:50.083569 [debug] [Thread-4  ]: Compiling seed.dbtlearn2.seed_full_moon_dates
+[0m09:24:50.083676 [debug] [Thread-5  ]: Compiling snapshot.dbtlearn2.scd_raw_hosts
+[0m09:24:50.085991 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbtlearn2.src_hosts"
+[0m09:24:50.086138 [debug] [Thread-6  ]: Compiling snapshot.dbtlearn2.scd_raw_listings
+[0m09:24:50.087991 [debug] [Thread-2  ]: Writing injected SQL for node "model.dbtlearn2.src_listings"
+[0m09:24:50.089782 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbtlearn2.src_reviews"
+[0m09:24:50.091779 [debug] [Thread-4  ]: Writing injected SQL for node "seed.dbtlearn2.seed_full_moon_dates"
+[0m09:24:50.094094 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:24:50.096404 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:24:50.096705 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:24:50.096894 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:24:50.096977 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:24:50.097102 [debug] [Thread-5  ]: Began executing node snapshot.dbtlearn2.scd_raw_hosts
+[0m09:24:50.097175 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:24:50.097280 [debug] [Thread-6  ]: Began executing node snapshot.dbtlearn2.scd_raw_listings
+[0m09:24:50.097693 [debug] [Thread-1  ]: Finished running node model.dbtlearn2.src_hosts
+[0m09:24:50.098050 [debug] [Thread-2  ]: Finished running node model.dbtlearn2.src_listings
+[0m09:24:50.098201 [debug] [Thread-4  ]: Began executing node seed.dbtlearn2.seed_full_moon_dates
+[0m09:24:50.098322 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:24:50.098688 [debug] [Thread-3  ]: Finished running node model.dbtlearn2.src_reviews
+[0m09:24:50.098823 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:24:50.099052 [debug] [Thread-1  ]: Began running node model.dbtlearn2.dim_hosts_cleansed
+[0m09:24:50.099242 [debug] [Thread-2  ]: Began running node model.dbtlearn2.dim_listings_cleansed
+[0m09:24:50.099317 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:24:50.099683 [debug] [Thread-5  ]: Finished running node snapshot.dbtlearn2.scd_raw_hosts
+[0m09:24:50.099928 [debug] [Thread-3  ]: Began running node model.dbtlearn2.fct_reviews
+[0m09:24:50.100292 [debug] [Thread-6  ]: Finished running node snapshot.dbtlearn2.scd_raw_listings
+[0m09:24:50.100613 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbtlearn2.dim_hosts_cleansed"
+[0m09:24:50.100934 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.dbtlearn2.dim_listings_cleansed"
+[0m09:24:50.101320 [debug] [Thread-4  ]: Finished running node seed.dbtlearn2.seed_full_moon_dates
+[0m09:24:50.101704 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbtlearn2.fct_reviews"
+[0m09:24:50.101877 [debug] [Thread-1  ]: Began compiling node model.dbtlearn2.dim_hosts_cleansed
+[0m09:24:50.101976 [debug] [Thread-2  ]: Began compiling node model.dbtlearn2.dim_listings_cleansed
+[0m09:24:50.102147 [debug] [Thread-3  ]: Began compiling node model.dbtlearn2.fct_reviews
+[0m09:24:50.102245 [debug] [Thread-1  ]: Compiling model.dbtlearn2.dim_hosts_cleansed
+[0m09:24:50.102344 [debug] [Thread-2  ]: Compiling model.dbtlearn2.dim_listings_cleansed
+[0m09:24:50.102435 [debug] [Thread-3  ]: Compiling model.dbtlearn2.fct_reviews
+[0m09:24:50.110231 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbtlearn2.dim_hosts_cleansed"
+[0m09:24:50.116102 [debug] [Thread-2  ]: Writing injected SQL for node "model.dbtlearn2.dim_listings_cleansed"
+[0m09:24:50.138001 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbtlearn2.fct_reviews"
+[0m09:24:50.138416 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:24:50.138547 [debug] [Thread-1  ]: Began executing node model.dbtlearn2.dim_hosts_cleansed
+[0m09:24:50.138661 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:24:50.138759 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:24:50.139167 [debug] [Thread-1  ]: Finished running node model.dbtlearn2.dim_hosts_cleansed
+[0m09:24:50.139322 [debug] [Thread-2  ]: Began executing node model.dbtlearn2.dim_listings_cleansed
+[0m09:24:50.139393 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:24:50.139585 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:24:50.139705 [debug] [Thread-3  ]: Began executing node model.dbtlearn2.fct_reviews
+[0m09:24:50.140079 [debug] [Thread-2  ]: Finished running node model.dbtlearn2.dim_listings_cleansed
+[0m09:24:50.140189 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:24:50.140768 [debug] [Thread-3  ]: Finished running node model.dbtlearn2.fct_reviews
+[0m09:24:50.140881 [debug] [Thread-5  ]: Began running node model.dbtlearn2.dim_listings_w_hosts
+[0m09:24:50.140994 [debug] [Thread-6  ]: Began running node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:24:50.141075 [debug] [Thread-4  ]: Began running node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:24:50.141167 [debug] [Thread-3  ]: Began running node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:24:50.141242 [debug] [Thread-1  ]: Began running node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:24:50.141357 [debug] [Thread-2  ]: Began running node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:24:50.141709 [debug] [Thread-5  ]: Acquiring new snowflake connection "model.dbtlearn2.dim_listings_w_hosts"
+[0m09:24:50.142038 [debug] [Thread-6  ]: Acquiring new snowflake connection "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m09:24:50.143261 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbtlearn2.dim_listings_minimum_nights"
+[0m09:24:50.143586 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:24:50.143908 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m09:24:50.144202 [debug] [Thread-2  ]: Acquiring new snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m09:24:50.144309 [debug] [Thread-5  ]: Began compiling node model.dbtlearn2.dim_listings_w_hosts
+[0m09:24:50.144408 [debug] [Thread-6  ]: Began compiling node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:24:50.144503 [debug] [Thread-4  ]: Began compiling node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:24:50.144594 [debug] [Thread-3  ]: Began compiling node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:24:50.144682 [debug] [Thread-1  ]: Began compiling node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:24:50.144769 [debug] [Thread-2  ]: Began compiling node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:24:50.144859 [debug] [Thread-5  ]: Compiling model.dbtlearn2.dim_listings_w_hosts
+[0m09:24:50.144948 [debug] [Thread-6  ]: Compiling test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:24:50.145033 [debug] [Thread-4  ]: Compiling test.dbtlearn2.dim_listings_minimum_nights
+[0m09:24:50.145126 [debug] [Thread-3  ]: Compiling test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:24:50.145213 [debug] [Thread-1  ]: Compiling test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:24:50.145304 [debug] [Thread-2  ]: Compiling test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:24:50.147451 [debug] [Thread-5  ]: Writing injected SQL for node "model.dbtlearn2.dim_listings_w_hosts"
+[0m09:24:50.151632 [debug] [Thread-6  ]: Writing injected SQL for node "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m09:24:50.153469 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbtlearn2.dim_listings_minimum_nights"
+[0m09:24:50.161521 [debug] [Thread-3  ]: Using snowflake connection "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:24:50.167337 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m09:24:50.170957 [debug] [Thread-2  ]: Writing injected SQL for node "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m09:24:50.171466 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:24:50.171582 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:24:50.171692 [debug] [Thread-3  ]: On test.dbtlearn2.no_nulls_in_dim_listings: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.no_nulls_in_dim_listings"} */
+describe table airbnb.dev.dim_listings_cleansed
+[0m09:24:50.171977 [debug] [Thread-5  ]: Began executing node model.dbtlearn2.dim_listings_w_hosts
+[0m09:24:50.172113 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:24:50.172246 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:24:50.172331 [debug] [Thread-6  ]: Began executing node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:24:50.172416 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:24:50.172527 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m09:24:50.172642 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:24:50.172745 [debug] [Thread-1  ]: Began executing node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:24:50.172841 [debug] [Thread-2  ]: Began executing node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:24:50.172946 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:24:50.173041 [debug] [Thread-4  ]: Began executing node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:24:50.173915 [debug] [Thread-5  ]: Finished running node model.dbtlearn2.dim_listings_w_hosts
+[0m09:24:50.174378 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:24:50.174497 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:24:50.174998 [debug] [Thread-6  ]: Finished running node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:24:50.175334 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:24:50.175687 [debug] [Thread-5  ]: Began running node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:24:50.176133 [debug] [Thread-1  ]: Finished running node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:24:50.176502 [debug] [Thread-2  ]: Finished running node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:24:50.176639 [debug] [Thread-6  ]: Began running node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:24:50.177056 [debug] [Thread-4  ]: Finished running node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:24:50.177430 [debug] [Thread-5  ]: Acquiring new snowflake connection "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"
+[0m09:24:50.177583 [debug] [Thread-1  ]: Began running node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:24:50.177740 [debug] [Thread-2  ]: Began running node model.dbtlearn2.mart_fullmoon_reviews
+[0m09:24:50.178073 [debug] [Thread-6  ]: Acquiring new snowflake connection "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m09:24:50.178190 [debug] [Thread-4  ]: Began running node test.dbtlearn2.consistent_created_at
+[0m09:24:50.178316 [debug] [Thread-5  ]: Began compiling node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:24:50.178622 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m09:24:50.178913 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.dbtlearn2.mart_fullmoon_reviews"
+[0m09:24:50.179015 [debug] [Thread-6  ]: Began compiling node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:24:50.179306 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbtlearn2.consistent_created_at"
+[0m09:24:50.179410 [debug] [Thread-5  ]: Compiling test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:24:50.179509 [debug] [Thread-1  ]: Began compiling node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:24:50.179603 [debug] [Thread-2  ]: Began compiling node model.dbtlearn2.mart_fullmoon_reviews
+[0m09:24:50.179691 [debug] [Thread-6  ]: Compiling test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:24:50.179782 [debug] [Thread-4  ]: Began compiling node test.dbtlearn2.consistent_created_at
+[0m09:24:50.182630 [debug] [Thread-5  ]: Writing injected SQL for node "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"
+[0m09:24:50.182803 [debug] [Thread-1  ]: Compiling test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:24:50.182919 [debug] [Thread-2  ]: Compiling model.dbtlearn2.mart_fullmoon_reviews
+[0m09:24:50.186706 [debug] [Thread-6  ]: Writing injected SQL for node "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m09:24:50.186847 [debug] [Thread-4  ]: Compiling test.dbtlearn2.consistent_created_at
+[0m09:24:50.191150 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m09:24:50.193423 [debug] [Thread-2  ]: Writing injected SQL for node "model.dbtlearn2.mart_fullmoon_reviews"
+[0m09:24:50.193619 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:24:50.195530 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbtlearn2.consistent_created_at"
+[0m09:24:50.195715 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:24:50.195917 [debug] [Thread-5  ]: Began executing node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:24:50.196065 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:24:50.196189 [debug] [Thread-6  ]: Began executing node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:24:50.196334 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:24:50.196452 [debug] [Thread-1  ]: Began executing node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:24:50.196523 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:24:50.196590 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:24:50.196690 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:24:50.197069 [debug] [Thread-5  ]: Finished running node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:24:50.197176 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:24:50.197313 [debug] [Thread-4  ]: Began executing node test.dbtlearn2.consistent_created_at
+[0m09:24:50.197425 [debug] [Thread-2  ]: Began executing node model.dbtlearn2.mart_fullmoon_reviews
+[0m09:24:50.197804 [debug] [Thread-6  ]: Finished running node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:24:50.198256 [debug] [Thread-1  ]: Finished running node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:24:50.198358 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:24:50.198460 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:24:50.198915 [debug] [Thread-4  ]: Finished running node test.dbtlearn2.consistent_created_at
+[0m09:24:50.199282 [debug] [Thread-2  ]: Finished running node model.dbtlearn2.mart_fullmoon_reviews
+[0m09:24:51.278043 [debug] [Thread-3  ]: SQL status: SUCCESS 8 in 1.11 seconds
+[0m09:24:51.280243 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:24:51.280821 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:24:51.280941 [debug] [Thread-3  ]: Began executing node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:24:51.281046 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:24:51.281161 [debug] [Thread-3  ]: On test.dbtlearn2.no_nulls_in_dim_listings: Close
+[0m09:24:51.670229 [debug] [Thread-3  ]: Finished running node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:24:51.672214 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:24:51.672387 [debug] [MainThread]: Connection 'test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e' was properly closed.
+[0m09:24:51.672493 [debug] [MainThread]: Connection 'model.dbtlearn2.mart_fullmoon_reviews' was properly closed.
+[0m09:24:51.672585 [debug] [MainThread]: Connection 'test.dbtlearn2.no_nulls_in_dim_listings' was properly closed.
+[0m09:24:51.672670 [debug] [MainThread]: Connection 'test.dbtlearn2.consistent_created_at' was properly closed.
+[0m09:24:51.672749 [debug] [MainThread]: Connection 'test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313' was properly closed.
+[0m09:24:51.672828 [debug] [MainThread]: Connection 'test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad' was properly closed.
+[0m09:24:51.680539 [info ] [MainThread]: Done.
+[0m09:24:51.683782 [debug] [MainThread]: Acquiring new snowflake connection "generate_catalog"
+[0m09:24:51.683918 [info ] [MainThread]: Building catalog
+[0m09:24:51.685502 [debug] [ThreadPool]: Acquiring new snowflake connection "airbnb.information_schema"
+[0m09:24:51.691092 [debug] [ThreadPool]: Using snowflake connection "airbnb.information_schema"
+[0m09:24:51.691257 [debug] [ThreadPool]: On airbnb.information_schema: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "airbnb.information_schema"} */
+with tables as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+              table_type as "table_type",
+              comment as "table_comment",
+
+              -- note: this is the _role_ that owns the table
+              table_owner as "table_owner",
+
+              'Clustering Key' as "stats:clustering_key:label",
+              clustering_key as "stats:clustering_key:value",
+              'The key used to cluster this table' as "stats:clustering_key:description",
+              (clustering_key is not null) as "stats:clustering_key:include",
+
+              'Row Count' as "stats:row_count:label",
+              row_count as "stats:row_count:value",
+              'An approximate count of rows in this table' as "stats:row_count:description",
+              (row_count is not null) as "stats:row_count:include",
+
+              'Approximate Size' as "stats:bytes:label",
+              bytes as "stats:bytes:value",
+              'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+              (bytes is not null) as "stats:bytes:include",
+
+              'Last Modified' as "stats:last_modified:label",
+              to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+              'The timestamp for last update/change' as "stats:last_modified:description",
+              (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+
+          from airbnb.INFORMATION_SCHEMA.tables
+
+      ),
+
+      columns as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+
+              column_name as "column_name",
+              ordinal_position as "column_index",
+              data_type as "column_type",
+              comment as "column_comment"
+
+          from airbnb.INFORMATION_SCHEMA.columns
+      )
+
+      select *
+      from tables
+      join columns using ("table_database", "table_schema", "table_name")
+      where (upper("table_schema") = upper('dev') or upper("table_schema") = upper('raw'))
+      order by "column_index"
+[0m09:24:51.691354 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:24:55.297722 [debug] [ThreadPool]: SQL status: SUCCESS 77 in 3.61 seconds
+[0m09:24:55.321451 [debug] [ThreadPool]: On airbnb.information_schema: Close
+[0m09:24:55.713633 [info ] [MainThread]: Catalog written to /Users/ariella.ca/dbtcourse/dbtlearn2-1/target/catalog.json
+[0m09:24:55.713990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe09b572130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0682a9fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0682a9430>]}
+[0m09:24:55.714214 [debug] [MainThread]: Flushing usage events
+[0m09:24:56.380552 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m09:24:56.380967 [debug] [MainThread]: Connection 'airbnb.information_schema' was properly closed.
+
+
+============================== 2023-02-07 09:31:42.829136 | 7f9b8ed6-f826-4a3d-af37-6340d831a01e ==============================
+[0m09:31:42.829181 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:31:42.829846 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'indirect_selection': 'eager', 'which': 'test', 'rpc_method': 'test'}
+[0m09:31:42.829997 [debug] [MainThread]: Tracking: tracking
+[0m09:31:42.830287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb42bd1e0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb42bd1e130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb42bd1e190>]}
+[0m09:31:42.898150 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:31:42.898355 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:31:42.904421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7f9b8ed6-f826-4a3d-af37-6340d831a01e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb4102370d0>]}
+[0m09:31:42.912177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7f9b8ed6-f826-4a3d-af37-6340d831a01e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3f861bfd0>]}
+[0m09:31:42.912401 [info ] [MainThread]: Found 8 models, 9 tests, 2 snapshots, 0 analyses, 417 macros, 0 operations, 1 seed file, 3 sources, 0 exposures, 0 metrics
+[0m09:31:42.912584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7f9b8ed6-f826-4a3d-af37-6340d831a01e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3f85350d0>]}
+[0m09:31:42.914057 [info ] [MainThread]: 
+[0m09:31:42.914524 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:31:42.915542 [debug] [ThreadPool]: Acquiring new snowflake connection "list_airbnb_dev"
+[0m09:31:42.925479 [debug] [ThreadPool]: Using snowflake connection "list_airbnb_dev"
+[0m09:31:42.925661 [debug] [ThreadPool]: On list_airbnb_dev: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "connection_name": "list_airbnb_dev"} */
+show terse objects in airbnb.dev
+[0m09:31:42.925775 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:31:44.433436 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.51 seconds
+[0m09:31:44.436019 [debug] [ThreadPool]: On list_airbnb_dev: Close
+[0m09:31:44.860513 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7f9b8ed6-f826-4a3d-af37-6340d831a01e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb42bd339a0>]}
+[0m09:31:44.861499 [info ] [MainThread]: Concurrency: 6 threads (target='dev')
+[0m09:31:44.861727 [info ] [MainThread]: 
+[0m09:31:44.867429 [debug] [Thread-1  ]: Began running node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:31:44.867813 [debug] [Thread-2  ]: Began running node test.dbtlearn2.consistent_created_at
+[0m09:31:44.868037 [debug] [Thread-3  ]: Began running node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:31:44.868234 [debug] [Thread-4  ]: Began running node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:31:44.868398 [debug] [Thread-5  ]: Began running node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:31:44.868577 [info ] [Thread-1  ]: 1 of 9 START test accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room  [RUN]
+[0m09:31:44.868743 [debug] [Thread-6  ]: Began running node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:31:44.868967 [info ] [Thread-2  ]: 2 of 9 START test consistent_created_at ........................................ [RUN]
+[0m09:31:44.869179 [info ] [Thread-3  ]: 3 of 9 START test dim_listings_minimum_nights .................................. [RUN]
+[0m09:31:44.869391 [info ] [Thread-4  ]: 4 of 9 START test no_nulls_in_dim_listings ..................................... [RUN]
+[0m09:31:44.869596 [info ] [Thread-5  ]: 5 of 9 START test not_null_dim_listings_cleansed_host_id ....................... [RUN]
+[0m09:31:44.870084 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m09:31:44.870208 [info ] [Thread-6  ]: 6 of 9 START test not_null_dim_listings_cleansed_listing_id .................... [RUN]
+[0m09:31:44.870594 [debug] [Thread-2  ]: Acquiring new snowflake connection "test.dbtlearn2.consistent_created_at"
+[0m09:31:44.870973 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbtlearn2.dim_listings_minimum_nights"
+[0m09:31:44.871325 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:31:44.871674 [debug] [Thread-5  ]: Acquiring new snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m09:31:44.871860 [debug] [Thread-1  ]: Began compiling node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:31:44.872548 [debug] [Thread-6  ]: Acquiring new snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m09:31:44.872741 [debug] [Thread-2  ]: Began compiling node test.dbtlearn2.consistent_created_at
+[0m09:31:44.872921 [debug] [Thread-3  ]: Began compiling node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:31:44.873094 [debug] [Thread-4  ]: Began compiling node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:31:44.873264 [debug] [Thread-5  ]: Began compiling node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:31:44.873457 [debug] [Thread-1  ]: Compiling test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:31:44.873637 [debug] [Thread-6  ]: Began compiling node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:31:44.873807 [debug] [Thread-2  ]: Compiling test.dbtlearn2.consistent_created_at
+[0m09:31:44.873963 [debug] [Thread-3  ]: Compiling test.dbtlearn2.dim_listings_minimum_nights
+[0m09:31:44.874122 [debug] [Thread-4  ]: Compiling test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:31:44.874269 [debug] [Thread-5  ]: Compiling test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:31:44.886623 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m09:31:44.886730 [debug] [Thread-6  ]: Compiling test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:31:44.888769 [debug] [Thread-2  ]: Writing injected SQL for node "test.dbtlearn2.consistent_created_at"
+[0m09:31:44.890924 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbtlearn2.dim_listings_minimum_nights"
+[0m09:31:44.900594 [debug] [Thread-4  ]: Using snowflake connection "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:31:44.907340 [debug] [Thread-5  ]: Writing injected SQL for node "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m09:31:44.910515 [debug] [Thread-6  ]: Writing injected SQL for node "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m09:31:44.910823 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:31:44.910909 [debug] [Thread-4  ]: On test.dbtlearn2.no_nulls_in_dim_listings: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.no_nulls_in_dim_listings"} */
+describe table airbnb.dev.dim_listings_cleansed
+[0m09:31:44.911138 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:31:44.911212 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:31:44.911383 [debug] [Thread-1  ]: Began executing node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:31:44.911458 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:31:44.911586 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m09:31:44.911700 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:31:44.911813 [debug] [Thread-3  ]: Began executing node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:31:44.911929 [debug] [Thread-2  ]: Began executing node test.dbtlearn2.consistent_created_at
+[0m09:31:44.926620 [debug] [Thread-1  ]: Writing runtime sql for node "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m09:31:44.926736 [debug] [Thread-5  ]: Began executing node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:31:44.927733 [debug] [Thread-6  ]: Began executing node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:31:44.929529 [debug] [Thread-3  ]: Writing runtime sql for node "test.dbtlearn2.dim_listings_minimum_nights"
+[0m09:31:44.932054 [debug] [Thread-2  ]: Writing runtime sql for node "test.dbtlearn2.consistent_created_at"
+[0m09:31:44.934437 [debug] [Thread-5  ]: Writing runtime sql for node "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m09:31:44.936114 [debug] [Thread-6  ]: Writing runtime sql for node "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m09:31:44.936880 [debug] [Thread-1  ]: Using snowflake connection "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m09:31:44.937226 [debug] [Thread-1  ]: On test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        room_type as value_field,
+        count(*) as n_records
+
+    from airbnb.dev.dim_listings_cleansed
+    group by room_type
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Entire home/apt','Private room','Shared room','Hotel room'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m09:31:44.937712 [debug] [Thread-5  ]: Using snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m09:31:44.938101 [debug] [Thread-6  ]: Using snowflake connection "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m09:31:44.938272 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m09:31:44.938624 [debug] [Thread-3  ]: Using snowflake connection "test.dbtlearn2.dim_listings_minimum_nights"
+[0m09:31:44.939084 [debug] [Thread-2  ]: Using snowflake connection "test.dbtlearn2.consistent_created_at"
+[0m09:31:44.939154 [debug] [Thread-5  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select host_id
+from airbnb.dev.dim_listings_cleansed
+where host_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m09:31:44.939255 [debug] [Thread-6  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select listing_id
+from airbnb.dev.dim_listings_cleansed
+where listing_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m09:31:44.939805 [debug] [Thread-3  ]: On test.dbtlearn2.dim_listings_minimum_nights: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.dim_listings_minimum_nights"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      select 
+*
+from airbnb.dev.dim_listings_cleansed
+where minimum_nights < 1
+limit 10
+      
+    ) dbt_internal_test
+[0m09:31:44.940208 [debug] [Thread-2  ]: On test.dbtlearn2.consistent_created_at: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.consistent_created_at"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      select 
+r.* 
+from airbnb.dev.fct_reviews r
+left join
+airbnb.dev.dim_listings_cleansed l
+on r.listing_id=l.listing_id
+where r.review_date<l.created_at
+
+limit 10
+      
+    ) dbt_internal_test
+[0m09:31:44.940315 [debug] [Thread-5  ]: Opening a new connection, currently in state init
+[0m09:31:44.940503 [debug] [Thread-6  ]: Opening a new connection, currently in state init
+[0m09:31:44.940815 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m09:31:44.941105 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m09:31:46.619841 [debug] [Thread-4  ]: SQL status: SUCCESS 8 in 1.71 seconds
+[0m09:31:46.622113 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:31:46.623720 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:31:46.623855 [debug] [Thread-4  ]: Began executing node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:31:46.626275 [debug] [Thread-4  ]: Writing runtime sql for node "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:31:46.627479 [debug] [Thread-4  ]: Using snowflake connection "test.dbtlearn2.no_nulls_in_dim_listings"
+[0m09:31:46.627584 [debug] [Thread-4  ]: On test.dbtlearn2.no_nulls_in_dim_listings: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.no_nulls_in_dim_listings"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    SELECT * FROM airbnb.dev.dim_listings_cleansed WHERE
+    LISTING_ID IS NULL OR
+    LISTING_NAME IS NULL OR
+    ROOM_TYPE IS NULL OR
+    MINIMUM_NIGHTS IS NULL OR
+    HOST_ID IS NULL OR
+    PRICE IS NULL OR
+    CREATED_AT IS NULL OR
+    UPDATED_AT IS NULL OR
+    
+    FALSE
+
+      
+    ) dbt_internal_test
+[0m09:31:46.868492 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.93 seconds
+[0m09:31:46.882714 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:31:46.882937 [debug] [Thread-1  ]: On test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af: Close
+[0m09:31:46.958228 [debug] [Thread-5  ]: SQL status: SUCCESS 1 in 2.02 seconds
+[0m09:31:46.958739 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 2.02 seconds
+[0m09:31:46.960954 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:31:46.962065 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:31:46.962237 [debug] [Thread-5  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be: Close
+[0m09:31:46.962354 [debug] [Thread-3  ]: On test.dbtlearn2.dim_listings_minimum_nights: Close
+[0m09:31:47.040819 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 2.1 seconds
+[0m09:31:47.044032 [debug] [Thread-2  ]: finished collecting timing info
+[0m09:31:47.044292 [debug] [Thread-2  ]: On test.dbtlearn2.consistent_created_at: Close
+[0m09:31:47.104963 [debug] [Thread-6  ]: SQL status: SUCCESS 1 in 2.16 seconds
+[0m09:31:47.108273 [debug] [Thread-6  ]: finished collecting timing info
+[0m09:31:47.109284 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 0.48 seconds
+[0m09:31:47.109443 [debug] [Thread-6  ]: On test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9: Close
+[0m09:31:47.110827 [debug] [Thread-4  ]: finished collecting timing info
+[0m09:31:47.111745 [debug] [Thread-4  ]: On test.dbtlearn2.no_nulls_in_dim_listings: Close
+[0m09:31:47.258773 [info ] [Thread-1  ]: 1 of 9 PASS accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room  [[32mPASS[0m in 2.39s]
+[0m09:31:47.259796 [debug] [Thread-1  ]: Finished running node test.dbtlearn2.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m09:31:47.259986 [debug] [Thread-1  ]: Began running node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:31:47.260227 [info ] [Thread-1  ]: 7 of 9 START test positive_value_dim_listings_cleansed_minimum_nights .......... [RUN]
+[0m09:31:47.260730 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"
+[0m09:31:47.260854 [debug] [Thread-1  ]: Began compiling node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:31:47.260990 [debug] [Thread-1  ]: Compiling test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:31:47.266204 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"
+[0m09:31:47.266665 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:31:47.266788 [debug] [Thread-1  ]: Began executing node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:31:47.268809 [debug] [Thread-1  ]: Writing runtime sql for node "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"
+[0m09:31:47.269480 [debug] [Thread-1  ]: Using snowflake connection "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"
+[0m09:31:47.269589 [debug] [Thread-1  ]: On test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    SELECT
+    *
+    FROM
+    airbnb.dev.dim_listings_cleansed
+    WHERE
+    minimum_nights < 1
+
+      
+    ) dbt_internal_test
+[0m09:31:47.269681 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m09:31:47.345475 [info ] [Thread-5  ]: 5 of 9 PASS not_null_dim_listings_cleansed_host_id ............................. [[32mPASS[0m in 2.47s]
+[0m09:31:47.345953 [debug] [Thread-5  ]: Finished running node test.dbtlearn2.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m09:31:47.346100 [debug] [Thread-5  ]: Began running node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:31:47.346265 [info ] [Thread-5  ]: 8 of 9 START test relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_  [RUN]
+[0m09:31:47.346697 [debug] [Thread-5  ]: Acquiring new snowflake connection "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m09:31:47.346805 [debug] [Thread-5  ]: Began compiling node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:31:47.346907 [debug] [Thread-5  ]: Compiling test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:31:47.354149 [debug] [Thread-5  ]: Writing injected SQL for node "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m09:31:47.354903 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:31:47.355026 [debug] [Thread-5  ]: Began executing node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:31:47.356806 [debug] [Thread-5  ]: Writing runtime sql for node "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m09:31:47.357173 [info ] [Thread-3  ]: 3 of 9 PASS dim_listings_minimum_nights ........................................ [[32mPASS[0m in 2.49s]
+[0m09:31:47.357509 [debug] [Thread-3  ]: Finished running node test.dbtlearn2.dim_listings_minimum_nights
+[0m09:31:47.358165 [debug] [Thread-5  ]: Using snowflake connection "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m09:31:47.358299 [debug] [Thread-3  ]: Began running node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:31:47.358432 [debug] [Thread-5  ]: On test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select host_id as from_field
+    from airbnb.dev.dim_listings_cleansed
+    where host_id is not null
+),
+
+parent as (
+    select host_id as to_field
+    from airbnb.dev.dim_hosts_cleansed
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m09:31:47.358540 [info ] [Thread-3  ]: 9 of 9 START test unique_dim_listings_cleansed_listing_id ...................... [RUN]
+[0m09:31:47.358637 [debug] [Thread-5  ]: Opening a new connection, currently in state closed
+[0m09:31:47.359464 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m09:31:47.360062 [debug] [Thread-3  ]: Began compiling node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:31:47.360689 [debug] [Thread-3  ]: Compiling test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:31:47.365083 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m09:31:47.365914 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:31:47.366048 [debug] [Thread-3  ]: Began executing node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:31:47.367860 [debug] [Thread-3  ]: Writing runtime sql for node "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m09:31:47.368750 [debug] [Thread-3  ]: Using snowflake connection "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m09:31:47.368860 [debug] [Thread-3  ]: On test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dbtlearn2", "target_name": "dev", "node_id": "test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    listing_id as unique_field,
+    count(*) as n_records
+
+from airbnb.dev.dim_listings_cleansed
+where listing_id is not null
+group by listing_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m09:31:47.368951 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m09:31:47.424631 [info ] [Thread-2  ]: 2 of 9 PASS consistent_created_at .............................................. [[32mPASS[0m in 2.55s]
+[0m09:31:47.425059 [debug] [Thread-2  ]: Finished running node test.dbtlearn2.consistent_created_at
+[0m09:31:47.498180 [info ] [Thread-4  ]: 4 of 9 PASS no_nulls_in_dim_listings ........................................... [[32mPASS[0m in 2.63s]
+[0m09:31:47.499086 [debug] [Thread-4  ]: Finished running node test.dbtlearn2.no_nulls_in_dim_listings
+[0m09:31:47.970837 [info ] [Thread-6  ]: 6 of 9 PASS not_null_dim_listings_cleansed_listing_id .......................... [[32mPASS[0m in 3.10s]
+[0m09:31:47.989565 [debug] [Thread-6  ]: Finished running node test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m09:31:48.401261 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.13 seconds
+[0m09:31:48.405430 [debug] [Thread-1  ]: finished collecting timing info
+[0m09:31:48.405733 [debug] [Thread-1  ]: On test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313: Close
+[0m09:31:48.491772 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 1.12 seconds
+[0m09:31:48.496216 [debug] [Thread-3  ]: finished collecting timing info
+[0m09:31:48.496461 [debug] [Thread-3  ]: On test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e: Close
+[0m09:31:48.624675 [debug] [Thread-5  ]: SQL status: SUCCESS 1 in 1.27 seconds
+[0m09:31:48.628646 [debug] [Thread-5  ]: finished collecting timing info
+[0m09:31:48.628991 [debug] [Thread-5  ]: On test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad: Close
+[0m09:31:48.791705 [info ] [Thread-1  ]: 7 of 9 PASS positive_value_dim_listings_cleansed_minimum_nights ................ [[32mPASS[0m in 1.53s]
+[0m09:31:48.792719 [debug] [Thread-1  ]: Finished running node test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313
+[0m09:31:48.872109 [info ] [Thread-3  ]: 9 of 9 PASS unique_dim_listings_cleansed_listing_id ............................ [[32mPASS[0m in 1.51s]
+[0m09:31:48.873193 [debug] [Thread-3  ]: Finished running node test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m09:31:49.017404 [info ] [Thread-5  ]: 8 of 9 PASS relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_  [[32mPASS[0m in 1.67s]
+[0m09:31:49.018165 [debug] [Thread-5  ]: Finished running node test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m09:31:49.019901 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:31:49.020305 [info ] [MainThread]: 
+[0m09:31:49.020498 [info ] [MainThread]: Finished running 9 tests in 0 hours 0 minutes and 6.11 seconds (6.11s).
+[0m09:31:49.020666 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:31:49.020767 [debug] [MainThread]: Connection 'test.dbtlearn2.positive_value_dim_listings_cleansed_minimum_nights.78fa6fc313' was properly closed.
+[0m09:31:49.020848 [debug] [MainThread]: Connection 'test.dbtlearn2.consistent_created_at' was properly closed.
+[0m09:31:49.020923 [debug] [MainThread]: Connection 'test.dbtlearn2.unique_dim_listings_cleansed_listing_id.930e4e859e' was properly closed.
+[0m09:31:49.021004 [debug] [MainThread]: Connection 'test.dbtlearn2.no_nulls_in_dim_listings' was properly closed.
+[0m09:31:49.021086 [debug] [MainThread]: Connection 'test.dbtlearn2.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad' was properly closed.
+[0m09:31:49.021166 [debug] [MainThread]: Connection 'test.dbtlearn2.not_null_dim_listings_cleansed_listing_id.2da437bec9' was properly closed.
+[0m09:31:49.028961 [info ] [MainThread]: 
+[0m09:31:49.029205 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:31:49.029404 [info ] [MainThread]: 
+[0m09:31:49.029567 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=0 SKIP=0 TOTAL=9
+[0m09:31:49.029774 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb42bd7a070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb42bd33b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3f8462160>]}
+[0m09:31:49.029934 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-07 09:32:48.426980 | 4c77f921-1c5b-450b-8e17-2e6e7c66bb25 ==============================
+[0m09:32:48.427227 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:32:48.429263 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/ariella.ca/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'port': 8080, 'open_browser': True, 'which': 'serve', 'indirect_selection': 'eager'}
+[0m09:32:48.429477 [debug] [MainThread]: Tracking: tracking
+[0m09:32:48.430043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa9c89d21c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa9c89d2220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa9c89d2280>]}
+[0m09:32:48.436197 [info ] [MainThread]: Serving docs at 0.0.0.0:8080
+[0m09:32:48.436472 [info ] [MainThread]: To access from your browser, navigate to:  http://localhost:8080
+[0m09:32:48.436668 [info ] [MainThread]: 
+[0m09:32:48.436816 [info ] [MainThread]: 
+[0m09:32:48.436967 [info ] [MainThread]: Press Ctrl+C to exit.
