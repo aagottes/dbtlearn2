@@ -1,6 +1,4 @@
--- back compat for old kwarg name
-  
-  begin;
+begin;
     
 
         insert into airbnb.dev.fct_reviews ("LISTING_ID", "REVIEW_DATE", "REVIEWER_NAME", "REVIEW_TEXT", "REVIEW_SENTIMENT")
