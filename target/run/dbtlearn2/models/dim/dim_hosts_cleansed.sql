@@ -1,5 +1,5 @@
 
-  create or replace   view airbnb.dev.dim_hosts_cleansed
+  create or replace  view airbnb.dev.dim_hosts_cleansed
   
    as (
     
@@ -22,4 +22,3 @@ from raw_hosts
     
     from src_hosts
   );
-

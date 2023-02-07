@@ -1,5 +1,5 @@
 
-  create or replace   view airbnb.dev.dim_listings_cleansed
+  create or replace  view airbnb.dev.dim_listings_cleansed
   
    as (
     
@@ -39,4 +39,3 @@ FROM
     
     from src_listings
   );
-
